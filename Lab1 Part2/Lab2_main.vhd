@@ -83,6 +83,10 @@ begin
 			clkdiv <= clkdiv +1;
 		end if;	    
 	end process clock_divider;
+	
+	if (rising_edge(clkdiv(10))) then
+		digCode <= std_logic_vector(to_unsigned(to_integer(unsigned(digCode)) + 1, 10));
+	end if;
 
 	PatCoder: PatCoder port map(btnCode,pat_0,pat_1,pat_2,pat_3,pat_4,pat_5,pat_6,pat_7);
 	--order of pat digits probably needs to flip, use anode selection. that's what enables the number anyway, or do it here
