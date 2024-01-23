@@ -20,10 +20,6 @@ architecture Structural of Lab2_main is
 
 	--Component Declarations:
 	
-	--CLOCK DIVIDER & ENCODER
-	
-	signal clkdiv : std_logic_vector(10 downto 0);		-- counter for clock divider
-	
 	--ANDODE DECODER
 		 
 		--does exist
@@ -69,6 +65,7 @@ architecture Structural of Lab2_main is
 	end component;
 
 --signals for the interal wires connecting
+signal clkdiv : std_logic_vector(10 downto 0); -- CLOCK 
 signal digCode : std_logic_vector (2 downto 0); --signal from clock division for anode and cathode selection
 signal btnCode : std_logic_vector (2 downto 0); --signal from buttons to pattern encoder to select the pattern
 signal muxSegSig: std_logic_vector(4 downto 0); --signal from cathode mux to 7 seg encoder
@@ -82,7 +79,21 @@ begin
 			clkdiv <= clkdiv +1;
 		end if;	    
 	end process clock_divider;
-
+	
+	digit_select: process (clkdiv(10))
+	begin
+		if (rising_edge(clkdiv(10))) then
+			case digCode is				--used to rotate 7 seg digits
+		 		when "000" => digCode <= "001";
+				when "001" => digCode <= "010":
+				when "010" => digCode <= "011";
+				when "011" => digCode <= "100";
+				when "100" => digCode <= "101";
+				when "101" => digCode <= "110";
+				when "110" => digCode <= "111";
+				when "111" => digCode <= "000";
+			end case;
+					
 	PatCoder: PatCoder port map(btnCode,pat_0,pat_1,pat_2,pat_3,pat_4,pat_5,pat_6,pat_7);
 	--order of pat digits probably needs to flip, use anode selection. that's what enables the number anyway, or do it here
 	
