@@ -24,10 +24,9 @@ architecture Structural of Lab2_main is
 	
 	signal clkdiv : std_logic_vector(10 downto 0);		-- counter for clock divider
 	
-	--ANDODE SEQUENCER
-	
-		--maybe build into clock divider? 
-		--does not exist
+	--ANDODE DECODER
+		 
+		--does exist
 	
 	--BUTTON ENCODER & DEBOUNCE
 	
@@ -86,6 +85,11 @@ begin
 
 	PatCoder: PatCoder port map(btnCode,pat_0,pat_1,pat_2,pat_3,pat_4,pat_5,pat_6,pat_7);
 	--order of pat digits probably needs to flip, use anode selection. that's what enables the number anyway, or do it here
+	
+	--AnnodeDecoder
+	--portmap(digCode,AN) --I don't know if it'll let us output direct to AN hardware
+	
+	
 	CathMux: Mux8to1_5bit port map(pat_0,pat_1,pat_2,pat_3,pat_4,pat_5,pat_6,pat_7,digcode,muxSegSig);--flip 7,6,5,4,3,2,1,0
 	CathCoder: sevseg_dot port map(muxSegSig,muxSegSig,C);
 	
