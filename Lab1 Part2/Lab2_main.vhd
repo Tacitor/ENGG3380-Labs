@@ -22,7 +22,7 @@ architecture Structural of Lab2_main is
 	
 	--CLOCK DIVIDER & ENCODER
 	
-		--does not exist yet
+	signal clkdiv : std_logic_vector(10 downto 0);		-- counter for clock divider
 	
 	--ANDODE SEQUENCER
 	
@@ -77,7 +77,12 @@ signal muxSegSig: std_logic_vector(4 downto 0); --signal from cathode mux to 7 s
 
 begin
 
---process (clk)?
+	clock_divider: process (CLK100MHz)		-- create system clock divder
+	begin
+		if (rising_edge(CLK100MHz)) then
+			clkdiv <= clkdiv +1;
+		end if;	    
+	end process clock_divider;
 
 	PatCoder: PatCoder port map(btnCode,pat_0,pat_1,pat_2,pat_3,pat_4,pat_5,pat_6,pat_7);
 	--order of pat digits probably needs to flip, use anode selection. that's what enables the number anyway, or do it here
