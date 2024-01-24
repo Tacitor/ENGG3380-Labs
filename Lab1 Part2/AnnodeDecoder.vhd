@@ -13,13 +13,13 @@ architecture dataflow of AnnodeDecoder is
 
 begin
 
-	AN_o <= "00000001" when X <= "000" else
-		  "00000010" when X <= "001" else
-		  "00000100" when X <= "010" else
-		  "00001000" when X <= "011" else
-		  "00010000" when X <= "100" else
-		  "00100000" when X <= "101" else
-		  "01000000" when X <= "110" else
-		  "10000000" when X <= "111";
+	AN_o <= "11111110" when X <= "000" else
+		  "11111101" when X <= "001" else
+		  "11111011" when X <= "010" else
+		  "11110111" when X <= "011" else
+		  "11101111" when X <= "100" else
+		  "11011111" when X <= "101" else
+		  "10111111" when X <= "110" else
+		  "01111111" when X <= "111";
 
 end dataflow;

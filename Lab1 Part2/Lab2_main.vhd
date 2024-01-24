@@ -9,7 +9,7 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --	!!!!! USE SAME NAMES AS master_Lab1_Pt2.xdc for port IO !!!!!
 
 entity Lab2_main is
-    Port (	CLK100MHz: in std_logic;
+    Port (	CLK100MHZ: in std_logic;
 			SW: in std_logic_vector(2 downto 0); -- use 3 switches as binary bits
 			AN : out std_logic_vector(7 downto 0); --7 seg ANODES
 			C : out std_logic_vector(7 downto 0) --7 seg Cathodes   order might be backward?
@@ -105,7 +105,7 @@ begin
 	   port map(digCode,AN); --I don't know if it'll let us output direct to AN hardware
 		
 	CathMux: Mux8to1_5bit 
-	   port map(pat_0,pat_1,pat_2,pat_3,pat_4,pat_5,pat_6,pat_7,digcode,muxSegSig);--flip 7,6,5,4,3,2,1,0??
+	   port map(pat_7,pat_6,pat_5,pat_4,pat_3,pat_2,pat_1,pat_0,digcode,muxSegSig);--flip 7,6,5,4,3,2,1,0??
 	CathCoder: sevseg_dot 
 	   port map (muxSegSig(4 downto 1),muxSegSig(0),C);
 
