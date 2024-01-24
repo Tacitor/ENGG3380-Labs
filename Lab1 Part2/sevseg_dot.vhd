@@ -3,7 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity sevseg_dot is
     Port ( int : in STD_LOGIC_VECTOR (4 downto 1);--same input vector here
-			dot : in std_logic_vector(0);		--as here when using component. 4-1 bits are character in hex, 0 bit is dot
+			dot : in std_logic;		--as here when using component. 4-1 bits are character in hex, 0 bit is dot
            seg : out STD_LOGIC_VECTOR (7 downto 0));-- 7-1 bits are cathodes, 0 bit is dot. -- 0 is dot on, 1 is dot off
 end sevseg_dot;
 
