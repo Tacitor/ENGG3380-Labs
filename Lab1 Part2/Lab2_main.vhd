@@ -9,8 +9,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 */
 entity Lab2_main is
     Port (	CLK100MHz in std_logic;
-			BTNU : in std_logic; BTNL : in std_logic; BTNC : in std_logic;
-			BTNR : in std_logic; BTND : in std_logic;
+			SW: in std_logic_vector(2 downto 0); -- use 3 switches as binary bits
 			AN : out std_logic_vector(7 downto 0); --7 seg ANODES
 			C : out std_logic_vector(7 downto 0); --7 seg Cathodes   order might be backward?
 	);
@@ -65,7 +64,7 @@ architecture Structural of Lab2_main is
 --signals for the interal wires connecting
 signal clkdiv : std_logic_vector(10 downto 0); -- CLOCK 
 signal digCode : std_logic_vector (2 downto 0); --signal from clock division for anode and cathode selection
-signal btnCode : std_logic_vector (2 downto 0); --signal from buttons to pattern encoder to select the pattern
+--OBSOLETE signal btnCode : std_logic_vector (2 downto 0); --signal from buttons to pattern encoder to select the pattern
 signal muxSegSig: std_logic_vector(4 downto 0); --signal from cathode mux to 7 seg encoder
 
 
@@ -92,7 +91,7 @@ begin
 				when "111" => digCode <= "000";
 			end case;
 					
-	PatCoder: PatCoder port map(btnCode,pat_0,pat_1,pat_2,pat_3,pat_4,pat_5,pat_6,pat_7);
+	PatCoder: PatCoder port map(SW,pat_0,pat_1,pat_2,pat_3,pat_4,pat_5,pat_6,pat_7);
 	--order of pat digits probably needs to flip, use anode selection. that's what enables the number anyway, or do it here
 	
 	--AnnodeDecoder
@@ -100,7 +99,5 @@ begin
 		
 	CathMux: Mux8to1_5bit port map(pat_0,pat_1,pat_2,pat_3,pat_4,pat_5,pat_6,pat_7,digcode,muxSegSig);--flip 7,6,5,4,3,2,1,0??
 	CathCoder: sevseg_dot port map(muxSegSig,muxSegSig,C);
-	
-	
 
 end Structural;
