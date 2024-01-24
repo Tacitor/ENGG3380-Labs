@@ -11,7 +11,7 @@ entity Mux8To1_5bit is
 			I_6 : in std_logic_vector(4 downto 0);
 			I_7 : in std_logic_vector(4 downto 0);
 			S : in  std_logic_vector(2 downto 0); --selection by clk div
-			Z : out  std_logic_vector(4 downto 0); --out
+			Z : out  std_logic_vector(4 downto 0) --out
 			);  
 end Mux8To1_5bit;
 
@@ -19,7 +19,7 @@ architecture Behavioral of Mux8To1_5bit is
 
 begin
 	process(S, I_0, I_1, I_2, I_3, I_4, I_5, I_6, I_7)
-		case S is
+	begin	case (S) is
             when "000" => Z <= I_0;
             when "001" => Z <= I_1;  
 			when "010" => Z <= I_2;
@@ -29,5 +29,5 @@ begin
             when "110" => Z <= I_6;  
 			when "111" => Z <= I_7;
         end case;
-	end process
+	end process;
 end Behavioral;
