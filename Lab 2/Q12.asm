@@ -3,8 +3,8 @@ arrayD:	.word	0 : 21
 sizeD:	.word	21
 	.text	
 main:
-	addi $s0, $0, 4 #init a = 2
-	addi $s1, $0, 6 #init b = 4
+	addi $s0, $0, 4 #init a = 4
+	addi $s1, $0, 6 #init b = 6
 
 	addi $t0, $0, 0 #init i = 0
 loop1:	slt $t5, $t0, $s0 #test for i < a
