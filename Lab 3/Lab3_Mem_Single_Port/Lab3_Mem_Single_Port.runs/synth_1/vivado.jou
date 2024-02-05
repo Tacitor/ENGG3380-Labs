@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Mon Feb 05 17:26:37 2024
+# Process ID: 16780
+# Current directory: C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/Lab3_Mem_Single_Port/Lab3_Mem_Single_Port.runs/synth_1
+# Command line: vivado.exe -log lab2mem.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab2mem.tcl
+# Log file: C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/Lab3_Mem_Single_Port/Lab3_Mem_Single_Port.runs/synth_1/lab2mem.vds
+# Journal file: C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/Lab3_Mem_Single_Port/Lab3_Mem_Single_Port.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source lab2mem.tcl -notrace
