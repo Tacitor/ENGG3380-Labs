@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/Lab3_Mem_Single_Port/Lab3_Mem_Single_Port.runs/synth_1'
+HD_PWD='C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab3/Lab3_Mem_Single_Port/Lab3_Mem_Single_Port.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -14,31 +14,31 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2136 
+INFO: Helper process launched with PID 12068 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 282.242 ; gain = 73.031
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 282.859 ; gain = 72.785
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'lab2mem' [C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/src/No-Change-Distributed-RAM.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'lab2mem' [C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab3/src/No-Change-Distributed-RAM.vhd:15]
 	Parameter Dwidth bound to: 16 - type: integer 
 	Parameter Awidth bound to: 8 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/src/No-Change-Distributed-RAM.vhd:19]
-INFO: [Synth 8-256] done synthesizing module 'lab2mem' (1#1) [C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/src/No-Change-Distributed-RAM.vhd:15]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "distributed" *) [C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab3/src/No-Change-Distributed-RAM.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'lab2mem' (1#1) [C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab3/src/No-Change-Distributed-RAM.vhd:15]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 320.625 ; gain = 111.414
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 321.266 ; gain = 111.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 320.625 ; gain = 111.414
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 321.266 ; gain = 111.191
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 320.625 ; gain = 111.414
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 321.266 ; gain = 111.191
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-3
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 327.277 ; gain = 118.066
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 323.762 ; gain = 113.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -81,7 +81,7 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 461.355 ; gain = 252.145
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 460.117 ; gain = 250.043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -109,7 +109,7 @@ Start Timing Optimization
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 461.355 ; gain = 252.145
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 460.117 ; gain = 250.043
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -121,7 +121,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 461.355 ; gain = 252.145
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 460.117 ; gain = 250.043
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -145,7 +145,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 461.355 ; gain = 252.145
+Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 460.117 ; gain = 250.043
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -158,7 +158,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 461.355 ; gain = 252.145
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 460.117 ; gain = 250.043
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -170,25 +170,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 461.355 ; gain = 252.145
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 460.117 ; gain = 250.043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 461.355 ; gain = 252.145
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 460.117 ; gain = 250.043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 461.355 ; gain = 252.145
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 460.117 ; gain = 250.043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 461.355 ; gain = 252.145
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 460.117 ; gain = 250.043
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -219,11 +219,11 @@ Report Instance Areas:
 |1     |top      |       |    76|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 461.355 ; gain = 252.145
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 460.117 ; gain = 250.043
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 461.355 ; gain = 252.145
-Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 461.355 ; gain = 252.145
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 460.117 ; gain = 250.043
+Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 460.117 ; gain = 250.043
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 42 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -236,7 +236,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 13 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 540.227 ; gain = 331.016
-INFO: [Common 17-1381] The checkpoint 'C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/Lab3_Mem_Single_Port/Lab3_Mem_Single_Port.runs/synth_1/lab2mem.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 540.227 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Feb 05 18:41:38 2024...
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 538.039 ; gain = 327.965
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab3/Lab3_Mem_Single_Port/Lab3_Mem_Single_Port.runs/synth_1/lab2mem.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 538.039 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 05 21:05:45 2024...

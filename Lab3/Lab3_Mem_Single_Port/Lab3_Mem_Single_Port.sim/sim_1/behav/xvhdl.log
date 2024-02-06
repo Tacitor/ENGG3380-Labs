@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab3/src/No-Change-Distributed-RAM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity lab2mem
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab3/src/RAM_TB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity RAM_TB

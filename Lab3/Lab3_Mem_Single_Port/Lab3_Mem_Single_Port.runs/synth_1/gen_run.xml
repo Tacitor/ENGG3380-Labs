@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1707176488">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-3" LaunchTime="1707185135">
   <File Type="RDS-PROPCONSTRS" Name="lab2mem_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="lab2mem.tcl"/>
   <File Type="RDS-RDS" Name="lab2mem.vds"/>
