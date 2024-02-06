@@ -27,9 +27,16 @@ webtalk_add_data -client project -key cpu_name -value "11th Gen Intel(R) Core(TM
 webtalk_add_data -client project -key cpu_speed -value "2419 MHz" -context "user_environment"
 webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
 webtalk_add_data -client project -key system_ram -value "12.000 GB" -context "user_environment"
+webtalk_add_data -client project -key os_name -value "Microsoft Windows 8 or later , 64-bit" -context "user_environment"
+webtalk_add_data -client project -key os_release -value "major release  (build 9200)" -context "user_environment"
+webtalk_add_data -client project -key cpu_name -value "11th Gen Intel(R) Core(TM) i5-1135G7 @ 2.40GHz" -context "user_environment"
+webtalk_add_data -client project -key cpu_speed -value "2419 MHz" -context "user_environment"
+webtalk_add_data -client project -key total_processors -value "1" -context "user_environment"
+webtalk_add_data -client project -key system_ram -value "12.000 GB" -context "user_environment"
 webtalk_register_client -client labtool
 webtalk_add_data -client labtool -key pgmcnt -value "00:00:00" -context "labtool\\usage"
 webtalk_add_data -client labtool -key cable -value "" -context "labtool\\usage"
 webtalk_add_data -client labtool -key cable -value "" -context "labtool\\usage"
-webtalk_transmit -clientid 986478280 -regid "" -xml C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/Lab3_Mem_Single_Port/Lab3_Mem_Single_Port.hw/webtalk/usage_statistics_ext_labtool.xml -html C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/Lab3_Mem_Single_Port/Lab3_Mem_Single_Port.hw/webtalk/usage_statistics_ext_labtool.html -wdm C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/Lab3_Mem_Single_Port/Lab3_Mem_Single_Port.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
+webtalk_add_data -client labtool -key cable -value "" -context "labtool\\usage"
+webtalk_transmit -clientid 632864398 -regid "" -xml C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/Lab3_Mem_Single_Port/Lab3_Mem_Single_Port.hw/webtalk/usage_statistics_ext_labtool.xml -html C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/Lab3_Mem_Single_Port/Lab3_Mem_Single_Port.hw/webtalk/usage_statistics_ext_labtool.html -wdm C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab 3/Lab3_Mem_Single_Port/Lab3_Mem_Single_Port.hw/webtalk/usage_statistics_ext_labtool.wdm -intro "<H3>LABTOOL Usage Report</H3><BR>"
 webtalk_terminate
