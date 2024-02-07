@@ -21,11 +21,11 @@ ARCHITECTURE behavior OF RAM_TB IS
    --Inputs
    signal we : std_logic := '0';
    signal clk : std_logic := '0';
-   signal addr : std_logic_vector(7 downto 0);
+   signal addr : std_logic_vector(7 downto 0) := "00000000";
    signal din : std_logic_vector(15 downto 0) := "1010101010101010";
 
  	--Outputs
-   signal dout : std_logic_vector(15 downto 0);
+   signal dout : std_logic_vector(15 downto 0) := "0101010101010101";
    
    -- Clock period definitions
    constant clk_period : time := 20 ns;
@@ -50,7 +50,7 @@ BEGIN
    
 		-- insert stimulus here 
 		clk <= '0';
-        wait for clk_period;
+        --wait for clk_period; --don't need this is should be initialized to the correct values already
 		addr <= "00000000";
 		clk <= '1';
 		wait for clk_period;
@@ -60,6 +60,20 @@ BEGIN
 		addr <= "00000001";
 		clk <= '1';
 		wait for clk_period;
+		
+		clk <= '0';
+        wait for clk_period;
+        addr <= "00000001";
+        we <= '1';
+        clk <= '1';
+        wait for clk_period;
+        
+        clk <= '0';
+        wait for clk_period;
+        addr <= "00000001";
+        we <= '0';
+        clk <= '1';
+        wait for clk_period;
 		
 		clk <= '0';
 		wait for clk_period;
