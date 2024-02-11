@@ -1,0 +1,1088 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
+| Date         : Sat Feb 10 20:27:36 2024
+| Host         : SOE-1532-19 running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file HW_Demo_Main_timing_summary_routed.rpt -rpx HW_Demo_Main_timing_summary_routed.rpx
+| Design       : HW_Demo_Main
+| Device       : 7a100t-csg324
+| Speed File   : -3  PRODUCTION 1.15 2016-08-17
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 3 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 11 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      8.380        0.000                      0                    8        0.477        0.000                      0                    8        3.950        0.000                       0                    13  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+sys_clk_pin  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin         8.380        0.000                      0                    8        0.477        0.000                      0                    8        3.950        0.000                       0                    13  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack        8.380ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.477ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.950ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             8.380ns  (required time - arrival time)
+  Source:                 my_ram/memory_reg_0_7_3_3/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        1.519ns  (logic 0.971ns (63.909%)  route 0.548ns (36.091%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.997ns = ( 13.997 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.253ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.330     1.330 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.525     2.855    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.076     2.931 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.322     4.253    my_ram/memory_reg_0_7_3_3/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_3_3/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.971     5.224 r  my_ram/memory_reg_0_7_3_3/SP/O
+                         net (fo=2, routed)           0.548     5.772    my_ram/p_0_out[3]
+    SLICE_X0Y90          FDRE                                         r  my_ram/dout_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000    10.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.263    11.263 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.443    12.706    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    12.778 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.219    13.997    my_ram/clk
+    SLICE_X0Y90          FDRE                                         r  my_ram/dout_reg[3]/C
+                         clock pessimism              0.230    14.227    
+                         clock uncertainty           -0.035    14.191    
+    SLICE_X0Y90          FDRE (Setup_fdre_C_D)       -0.039    14.152    my_ram/dout_reg[3]
+  -------------------------------------------------------------------
+                         required time                         14.152    
+                         arrival time                          -5.772    
+  -------------------------------------------------------------------
+                         slack                                  8.380    
+
+Slack (MET) :             8.452ns  (required time - arrival time)
+  Source:                 my_ram/memory_reg_0_7_2_2/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[2]_lopt_replica/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        1.457ns  (logic 0.974ns (66.840%)  route 0.483ns (33.160%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.998ns = ( 13.998 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.253ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.330     1.330 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.525     2.855    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.076     2.931 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.322     4.253    my_ram/memory_reg_0_7_2_2/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_2_2/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.974     5.227 r  my_ram/memory_reg_0_7_2_2/SP/O
+                         net (fo=2, routed)           0.483     5.710    my_ram/p_0_out[2]
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[2]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000    10.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.263    11.263 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.443    12.706    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    12.778 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.220    13.998    my_ram/clk
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[2]_lopt_replica/C
+                         clock pessimism              0.230    14.228    
+                         clock uncertainty           -0.035    14.192    
+    SLICE_X0Y93          FDRE (Setup_fdre_C_D)       -0.030    14.162    my_ram/dout_reg[2]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         14.162    
+                         arrival time                          -5.710    
+  -------------------------------------------------------------------
+                         slack                                  8.452    
+
+Slack (MET) :             8.494ns  (required time - arrival time)
+  Source:                 my_ram/memory_reg_0_7_3_3/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[3]_lopt_replica/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        1.395ns  (logic 0.971ns (69.589%)  route 0.424ns (30.411%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.997ns = ( 13.997 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.253ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.330     1.330 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.525     2.855    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.076     2.931 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.322     4.253    my_ram/memory_reg_0_7_3_3/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_3_3/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.971     5.224 r  my_ram/memory_reg_0_7_3_3/SP/O
+                         net (fo=2, routed)           0.424     5.648    my_ram/p_0_out[3]
+    SLICE_X0Y90          FDRE                                         r  my_ram/dout_reg[3]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000    10.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.263    11.263 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.443    12.706    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    12.778 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.219    13.997    my_ram/clk
+    SLICE_X0Y90          FDRE                                         r  my_ram/dout_reg[3]_lopt_replica/C
+                         clock pessimism              0.230    14.227    
+                         clock uncertainty           -0.035    14.191    
+    SLICE_X0Y90          FDRE (Setup_fdre_C_D)       -0.049    14.142    my_ram/dout_reg[3]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         14.142    
+                         arrival time                          -5.648    
+  -------------------------------------------------------------------
+                         slack                                  8.494    
+
+Slack (MET) :             8.534ns  (required time - arrival time)
+  Source:                 my_ram/memory_reg_0_7_0_0/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[0]_lopt_replica/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        1.356ns  (logic 0.980ns (72.262%)  route 0.376ns (27.738%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.998ns = ( 13.998 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.253ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.330     1.330 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.525     2.855    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.076     2.931 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.322     4.253    my_ram/memory_reg_0_7_0_0/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_0_0/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.980     5.233 r  my_ram/memory_reg_0_7_0_0/SP/O
+                         net (fo=2, routed)           0.376     5.609    my_ram/p_0_out[0]
+    SLICE_X1Y93          FDRE                                         r  my_ram/dout_reg[0]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000    10.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.263    11.263 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.443    12.706    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    12.778 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.220    13.998    my_ram/clk
+    SLICE_X1Y93          FDRE                                         r  my_ram/dout_reg[0]_lopt_replica/C
+                         clock pessimism              0.230    14.228    
+                         clock uncertainty           -0.035    14.192    
+    SLICE_X1Y93          FDRE (Setup_fdre_C_D)       -0.049    14.143    my_ram/dout_reg[0]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         14.143    
+                         arrival time                          -5.609    
+  -------------------------------------------------------------------
+                         slack                                  8.534    
+
+Slack (MET) :             8.546ns  (required time - arrival time)
+  Source:                 my_ram/memory_reg_0_7_0_0/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        1.354ns  (logic 0.980ns (72.369%)  route 0.374ns (27.631%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.998ns = ( 13.998 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.253ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.330     1.330 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.525     2.855    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.076     2.931 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.322     4.253    my_ram/memory_reg_0_7_0_0/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_0_0/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.980     5.233 r  my_ram/memory_reg_0_7_0_0/SP/O
+                         net (fo=2, routed)           0.374     5.607    my_ram/p_0_out[0]
+    SLICE_X1Y93          FDRE                                         r  my_ram/dout_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000    10.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.263    11.263 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.443    12.706    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    12.778 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.220    13.998    my_ram/clk
+    SLICE_X1Y93          FDRE                                         r  my_ram/dout_reg[0]/C
+                         clock pessimism              0.230    14.228    
+                         clock uncertainty           -0.035    14.192    
+    SLICE_X1Y93          FDRE (Setup_fdre_C_D)       -0.039    14.153    my_ram/dout_reg[0]
+  -------------------------------------------------------------------
+                         required time                         14.153    
+                         arrival time                          -5.607    
+  -------------------------------------------------------------------
+                         slack                                  8.546    
+
+Slack (MET) :             8.570ns  (required time - arrival time)
+  Source:                 my_ram/memory_reg_0_7_2_2/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        1.335ns  (logic 0.974ns (72.934%)  route 0.361ns (27.066%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.998ns = ( 13.998 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.253ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.330     1.330 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.525     2.855    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.076     2.931 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.322     4.253    my_ram/memory_reg_0_7_2_2/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_2_2/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.974     5.227 r  my_ram/memory_reg_0_7_2_2/SP/O
+                         net (fo=2, routed)           0.361     5.588    my_ram/p_0_out[2]
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000    10.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.263    11.263 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.443    12.706    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    12.778 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.220    13.998    my_ram/clk
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[2]/C
+                         clock pessimism              0.230    14.228    
+                         clock uncertainty           -0.035    14.192    
+    SLICE_X0Y93          FDRE (Setup_fdre_C_D)       -0.034    14.158    my_ram/dout_reg[2]
+  -------------------------------------------------------------------
+                         required time                         14.158    
+                         arrival time                          -5.588    
+  -------------------------------------------------------------------
+                         slack                                  8.570    
+
+Slack (MET) :             8.697ns  (required time - arrival time)
+  Source:                 my_ram/memory_reg_0_7_1_1/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[1]_lopt_replica/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        1.194ns  (logic 0.969ns (81.178%)  route 0.225ns (18.822%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.998ns = ( 13.998 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.253ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.330     1.330 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.525     2.855    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.076     2.931 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.322     4.253    my_ram/memory_reg_0_7_1_1/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_1_1/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.969     5.222 r  my_ram/memory_reg_0_7_1_1/SP/O
+                         net (fo=2, routed)           0.225     5.446    my_ram/p_0_out[1]
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[1]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000    10.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.263    11.263 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.443    12.706    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    12.778 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.220    13.998    my_ram/clk
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[1]_lopt_replica/C
+                         clock pessimism              0.230    14.228    
+                         clock uncertainty           -0.035    14.192    
+    SLICE_X0Y93          FDRE (Setup_fdre_C_D)       -0.049    14.143    my_ram/dout_reg[1]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         14.143    
+                         arrival time                          -5.446    
+  -------------------------------------------------------------------
+                         slack                                  8.697    
+
+Slack (MET) :             8.702ns  (required time - arrival time)
+  Source:                 my_ram/memory_reg_0_7_1_1/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        1.198ns  (logic 0.969ns (80.872%)  route 0.229ns (19.128%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.025ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.998ns = ( 13.998 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.253ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.330     1.330 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.525     2.855    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.076     2.931 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.322     4.253    my_ram/memory_reg_0_7_1_1/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_1_1/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.969     5.222 r  my_ram/memory_reg_0_7_1_1/SP/O
+                         net (fo=2, routed)           0.229     5.451    my_ram/p_0_out[1]
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000    10.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         1.263    11.263 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           1.443    12.706    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.072    12.778 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          1.220    13.998    my_ram/clk
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[1]/C
+                         clock pessimism              0.230    14.228    
+                         clock uncertainty           -0.035    14.192    
+    SLICE_X0Y93          FDRE (Setup_fdre_C_D)       -0.039    14.153    my_ram/dout_reg[1]
+  -------------------------------------------------------------------
+                         required time                         14.153    
+                         arrival time                          -5.451    
+  -------------------------------------------------------------------
+                         slack                                  8.702    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.477ns  (arrival time - required time)
+  Source:                 my_ram/memory_reg_0_7_2_2/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.563ns  (logic 0.388ns (68.861%)  route 0.175ns (31.139%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.042ns
+    Source Clock Delay      (SCD):    1.523ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.604     1.523    my_ram/memory_reg_0_7_2_2/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_2_2/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.388     1.911 r  my_ram/memory_reg_0_7_2_2/SP/O
+                         net (fo=2, routed)           0.175     2.087    my_ram/p_0_out[2]
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.877     2.042    my_ram/clk
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[2]/C
+                         clock pessimism             -0.502     1.539    
+    SLICE_X0Y93          FDRE (Hold_fdre_C_D)         0.070     1.609    my_ram/dout_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.609    
+                         arrival time                           2.087    
+  -------------------------------------------------------------------
+                         slack                                  0.477    
+
+Slack (MET) :             0.494ns  (arrival time - required time)
+  Source:                 my_ram/memory_reg_0_7_0_0/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.580ns  (logic 0.393ns (67.739%)  route 0.187ns (32.261%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.042ns
+    Source Clock Delay      (SCD):    1.523ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.604     1.523    my_ram/memory_reg_0_7_0_0/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_0_0/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.393     1.916 r  my_ram/memory_reg_0_7_0_0/SP/O
+                         net (fo=2, routed)           0.187     2.103    my_ram/p_0_out[0]
+    SLICE_X1Y93          FDRE                                         r  my_ram/dout_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.877     2.042    my_ram/clk
+    SLICE_X1Y93          FDRE                                         r  my_ram/dout_reg[0]/C
+                         clock pessimism             -0.502     1.539    
+    SLICE_X1Y93          FDRE (Hold_fdre_C_D)         0.070     1.609    my_ram/dout_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.609    
+                         arrival time                           2.103    
+  -------------------------------------------------------------------
+                         slack                                  0.494    
+
+Slack (MET) :             0.499ns  (arrival time - required time)
+  Source:                 my_ram/memory_reg_0_7_0_0/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[0]_lopt_replica/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.581ns  (logic 0.393ns (67.623%)  route 0.188ns (32.377%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.042ns
+    Source Clock Delay      (SCD):    1.523ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.604     1.523    my_ram/memory_reg_0_7_0_0/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_0_0/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.393     1.916 r  my_ram/memory_reg_0_7_0_0/SP/O
+                         net (fo=2, routed)           0.188     2.104    my_ram/p_0_out[0]
+    SLICE_X1Y93          FDRE                                         r  my_ram/dout_reg[0]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.877     2.042    my_ram/clk
+    SLICE_X1Y93          FDRE                                         r  my_ram/dout_reg[0]_lopt_replica/C
+                         clock pessimism             -0.502     1.539    
+    SLICE_X1Y93          FDRE (Hold_fdre_C_D)         0.066     1.605    my_ram/dout_reg[0]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         -1.605    
+                         arrival time                           2.104    
+  -------------------------------------------------------------------
+                         slack                                  0.499    
+
+Slack (MET) :             0.501ns  (arrival time - required time)
+  Source:                 my_ram/memory_reg_0_7_1_1/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[1]_lopt_replica/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.583ns  (logic 0.478ns (82.035%)  route 0.105ns (17.965%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.042ns
+    Source Clock Delay      (SCD):    1.523ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.604     1.523    my_ram/memory_reg_0_7_1_1/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_1_1/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.478     2.001 r  my_ram/memory_reg_0_7_1_1/SP/O
+                         net (fo=2, routed)           0.105     2.106    my_ram/p_0_out[1]
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[1]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.877     2.042    my_ram/clk
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[1]_lopt_replica/C
+                         clock pessimism             -0.502     1.539    
+    SLICE_X0Y93          FDRE (Hold_fdre_C_D)         0.066     1.605    my_ram/dout_reg[1]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         -1.605    
+                         arrival time                           2.106    
+  -------------------------------------------------------------------
+                         slack                                  0.501    
+
+Slack (MET) :             0.501ns  (arrival time - required time)
+  Source:                 my_ram/memory_reg_0_7_1_1/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.587ns  (logic 0.478ns (81.404%)  route 0.109ns (18.596%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.042ns
+    Source Clock Delay      (SCD):    1.523ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.604     1.523    my_ram/memory_reg_0_7_1_1/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_1_1/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.478     2.001 r  my_ram/memory_reg_0_7_1_1/SP/O
+                         net (fo=2, routed)           0.109     2.111    my_ram/p_0_out[1]
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.877     2.042    my_ram/clk
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[1]/C
+                         clock pessimism             -0.502     1.539    
+    SLICE_X0Y93          FDRE (Hold_fdre_C_D)         0.070     1.609    my_ram/dout_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.609    
+                         arrival time                           2.111    
+  -------------------------------------------------------------------
+                         slack                                  0.501    
+
+Slack (MET) :             0.517ns  (arrival time - required time)
+  Source:                 my_ram/memory_reg_0_7_3_3/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[3]_lopt_replica/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.598ns  (logic 0.386ns (64.512%)  route 0.212ns (35.488%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.041ns
+    Source Clock Delay      (SCD):    1.523ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.604     1.523    my_ram/memory_reg_0_7_3_3/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_3_3/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.386     1.909 r  my_ram/memory_reg_0_7_3_3/SP/O
+                         net (fo=2, routed)           0.212     2.122    my_ram/p_0_out[3]
+    SLICE_X0Y90          FDRE                                         r  my_ram/dout_reg[3]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.876     2.041    my_ram/clk
+    SLICE_X0Y90          FDRE                                         r  my_ram/dout_reg[3]_lopt_replica/C
+                         clock pessimism             -0.502     1.538    
+    SLICE_X0Y90          FDRE (Hold_fdre_C_D)         0.066     1.604    my_ram/dout_reg[3]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         -1.604    
+                         arrival time                           2.122    
+  -------------------------------------------------------------------
+                         slack                                  0.517    
+
+Slack (MET) :             0.535ns  (arrival time - required time)
+  Source:                 my_ram/memory_reg_0_7_2_2/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[2]_lopt_replica/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.623ns  (logic 0.388ns (62.258%)  route 0.235ns (37.742%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.042ns
+    Source Clock Delay      (SCD):    1.523ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.604     1.523    my_ram/memory_reg_0_7_2_2/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_2_2/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.388     1.911 r  my_ram/memory_reg_0_7_2_2/SP/O
+                         net (fo=2, routed)           0.235     2.147    my_ram/p_0_out[2]
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[2]_lopt_replica/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.877     2.042    my_ram/clk
+    SLICE_X0Y93          FDRE                                         r  my_ram/dout_reg[2]_lopt_replica/C
+                         clock pessimism             -0.502     1.539    
+    SLICE_X0Y93          FDRE (Hold_fdre_C_D)         0.072     1.611    my_ram/dout_reg[2]_lopt_replica
+  -------------------------------------------------------------------
+                         required time                         -1.611    
+                         arrival time                           2.147    
+  -------------------------------------------------------------------
+                         slack                                  0.535    
+
+Slack (MET) :             0.575ns  (arrival time - required time)
+  Source:                 my_ram/memory_reg_0_7_3_3/SP/CLK
+                            (rising edge-triggered cell RAMS32 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            my_ram/dout_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.660ns  (logic 0.386ns (58.454%)  route 0.274ns (41.546%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    2.041ns
+    Source Clock Delay      (SCD):    1.523ns
+    Clock Pessimism Removal (CPR):    0.502ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.644     0.894    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.920 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.604     1.523    my_ram/memory_reg_0_7_3_3/WCLK
+    SLICE_X2Y93          RAMS32                                       r  my_ram/memory_reg_0_7_3_3/SP/CLK
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y93          RAMS32 (Prop_rams32_CLK_O)
+                                                      0.386     1.909 r  my_ram/memory_reg_0_7_3_3/SP/O
+                         net (fo=2, routed)           0.274     2.184    my_ram/p_0_out[3]
+    SLICE_X0Y90          FDRE                                         r  my_ram/dout_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  hundo_meg_osc (IN)
+                         net (fo=0)                   0.000     0.000    hundo_meg_osc
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  hundo_meg_osc_IBUF_inst/O
+                         net (fo=1, routed)           0.699     1.136    hundo_meg_osc_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.165 r  hundo_meg_osc_IBUF_BUFG_inst/O
+                         net (fo=12, routed)          0.876     2.041    my_ram/clk
+    SLICE_X0Y90          FDRE                                         r  my_ram/dout_reg[3]/C
+                         clock pessimism             -0.502     1.538    
+    SLICE_X0Y90          FDRE (Hold_fdre_C_D)         0.070     1.608    my_ram/dout_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.608    
+                         arrival time                           2.184    
+  -------------------------------------------------------------------
+                         slack                                  0.575    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { hundo_meg_osc }
+
+Check Type        Corner  Lib Pin     Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     BUFG/I      n/a            1.592         10.000      8.408      BUFGCTRL_X0Y16  hundo_meg_osc_IBUF_BUFG_inst/I
+Min Period        n/a     FDRE/C      n/a            1.000         10.000      9.000      SLICE_X1Y93     my_ram/dout_reg[0]/C
+Min Period        n/a     FDRE/C      n/a            1.000         10.000      9.000      SLICE_X1Y93     my_ram/dout_reg[0]_lopt_replica/C
+Min Period        n/a     FDRE/C      n/a            1.000         10.000      9.000      SLICE_X0Y93     my_ram/dout_reg[1]/C
+Min Period        n/a     FDRE/C      n/a            1.000         10.000      9.000      SLICE_X0Y93     my_ram/dout_reg[1]_lopt_replica/C
+Min Period        n/a     FDRE/C      n/a            1.000         10.000      9.000      SLICE_X0Y93     my_ram/dout_reg[2]/C
+Min Period        n/a     FDRE/C      n/a            1.000         10.000      9.000      SLICE_X0Y93     my_ram/dout_reg[2]_lopt_replica/C
+Min Period        n/a     FDRE/C      n/a            1.000         10.000      9.000      SLICE_X0Y90     my_ram/dout_reg[3]/C
+Min Period        n/a     FDRE/C      n/a            1.000         10.000      9.000      SLICE_X0Y90     my_ram/dout_reg[3]_lopt_replica/C
+Low Pulse Width   Slow    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_0_0/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_0_0/SP/CLK
+Low Pulse Width   Slow    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_1_1/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_1_1/SP/CLK
+Low Pulse Width   Slow    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_2_2/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_2_2/SP/CLK
+Low Pulse Width   Slow    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_3_3/SP/CLK
+Low Pulse Width   Fast    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_3_3/SP/CLK
+Low Pulse Width   Slow    FDRE/C      n/a            0.500         5.000       4.500      SLICE_X1Y93     my_ram/dout_reg[0]/C
+Low Pulse Width   Fast    FDRE/C      n/a            0.500         5.000       4.500      SLICE_X1Y93     my_ram/dout_reg[0]/C
+High Pulse Width  Slow    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_0_0/SP/CLK
+High Pulse Width  Slow    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_1_1/SP/CLK
+High Pulse Width  Slow    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_2_2/SP/CLK
+High Pulse Width  Slow    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_3_3/SP/CLK
+High Pulse Width  Fast    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_0_0/SP/CLK
+High Pulse Width  Fast    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_1_1/SP/CLK
+High Pulse Width  Fast    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_2_2/SP/CLK
+High Pulse Width  Fast    RAMS32/CLK  n/a            1.050         5.000       3.950      SLICE_X2Y93     my_ram/memory_reg_0_7_3_3/SP/CLK
+High Pulse Width  Slow    FDRE/C      n/a            0.500         5.000       4.500      SLICE_X1Y93     my_ram/dout_reg[0]/C
+High Pulse Width  Slow    FDRE/C      n/a            0.500         5.000       4.500      SLICE_X1Y93     my_ram/dout_reg[0]_lopt_replica/C
+
+
+

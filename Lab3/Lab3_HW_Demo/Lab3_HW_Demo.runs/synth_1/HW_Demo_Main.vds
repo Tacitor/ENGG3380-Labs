@@ -1,0 +1,308 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Sat Feb 10 20:25:46 2024
+# Process ID: 10344
+# Current directory: D:/ENGG_3380/ENGG3380-Labs/Lab3/Lab3_HW_Demo/Lab3_HW_Demo.runs/synth_1
+# Command line: vivado.exe -log HW_Demo_Main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source HW_Demo_Main.tcl
+# Log file: D:/ENGG_3380/ENGG3380-Labs/Lab3/Lab3_HW_Demo/Lab3_HW_Demo.runs/synth_1/HW_Demo_Main.vds
+# Journal file: D:/ENGG_3380/ENGG3380-Labs/Lab3/Lab3_HW_Demo/Lab3_HW_Demo.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source HW_Demo_Main.tcl -notrace
+Command: synth_design -top HW_Demo_Main -part xc7a100tcsg324-3
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4644 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 324.406 ; gain = 111.691
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'HW_Demo_Main' [D:/ENGG_3380/ENGG3380-Labs/Lab3/src/HW_Demo_Main.vhd:44]
+	Parameter Dwidth bound to: 4 - type: integer 
+	Parameter Awidth bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'lab2mem' declared at 'D:/ENGG_3380/ENGG3380-Labs/Lab3/src/Write-First-Block-FPGA.vhd:6' bound to instance 'my_ram' of component 'lab2mem' [D:/ENGG_3380/ENGG3380-Labs/Lab3/src/HW_Demo_Main.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'lab2mem' [D:/ENGG_3380/ENGG3380-Labs/Lab3/src/Write-First-Block-FPGA.vhd:15]
+	Parameter Dwidth bound to: 4 - type: integer 
+	Parameter Awidth bound to: 3 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [D:/ENGG_3380/ENGG3380-Labs/Lab3/src/Write-First-Block-FPGA.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'lab2mem' (1#1) [D:/ENGG_3380/ENGG3380-Labs/Lab3/src/Write-First-Block-FPGA.vhd:15]
+INFO: [Synth 8-3491] module 'sevseg_dec' declared at 'D:/ENGG_3380/ENGG3380-Labs/Lab3/src/sevseg_dec.vhd:4' bound to instance 'le_decoder' of component 'sevseg_dec' [D:/ENGG_3380/ENGG3380-Labs/Lab3/src/HW_Demo_Main.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'sevseg_dec' [D:/ENGG_3380/ENGG3380-Labs/Lab3/src/sevseg_dec.vhd:9]
+INFO: [Synth 8-226] default block is never used [D:/ENGG_3380/ENGG3380-Labs/Lab3/src/sevseg_dec.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'sevseg_dec' (2#1) [D:/ENGG_3380/ENGG3380-Labs/Lab3/src/sevseg_dec.vhd:9]
+INFO: [Synth 8-256] done synthesizing module 'HW_Demo_Main' (3#1) [D:/ENGG_3380/ENGG3380-Labs/Lab3/src/HW_Demo_Main.vhd:44]
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[7] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[6] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[5] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[4] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[3] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[2] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[1] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 362.703 ; gain = 149.988
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 362.703 ; gain = 149.988
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/ENGG_3380/ENGG3380-Labs/Lab3/src/master_Lab.xdc]
+Finished Parsing XDC File [D:/ENGG_3380/ENGG3380-Labs/Lab3/src/master_Lab.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/ENGG_3380/ENGG3380-Labs/Lab3/src/master_Lab.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/HW_Demo_Main_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/HW_Demo_Main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 620.336 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 620.336 ; gain = 407.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 620.336 ; gain = 407.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 620.336 ; gain = 407.621
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5583] The signal memory_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The depth (3 address bits) is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 620.336 ; gain = 407.621
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---RAMs : 
+	               32 Bit         RAMs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module lab2mem 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---RAMs : 
+	               32 Bit         RAMs := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[7] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[6] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[5] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[4] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[3] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[2] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[1] driven by constant 1
+WARNING: [Synth 8-3917] design HW_Demo_Main has port sev_seg_an[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:18 . Memory (MB): peak = 620.336 ; gain = 407.621
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping  Report (see note below)
++-------------+-------------------+-----------+----------------------+----------------+
+|Module Name  | RTL Object        | Inference | Size (Depth x Width) | Primitives     | 
++-------------+-------------------+-----------+----------------------+----------------+
+|HW_Demo_Main | my_ram/memory_reg | Implied   | 8 x 4                | RAM16X1S x 4   | 
++-------------+-------------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 623.363 ; gain = 410.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 623.363 ; gain = 410.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 642.723 ; gain = 430.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 642.723 ; gain = 430.008
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 642.723 ; gain = 430.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 642.723 ; gain = 430.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 642.723 ; gain = 430.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 642.723 ; gain = 430.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 642.723 ; gain = 430.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |LUT4     |     7|
+|3     |RAM16X1S |     4|
+|4     |FDRE     |     4|
+|5     |IBUF     |     4|
+|6     |OBUF     |    20|
++------+---------+------+
+
+Report Instance Areas: 
++------+-------------+-----------+------+
+|      |Instance     |Module     |Cells |
++------+-------------+-----------+------+
+|1     |top          |           |    40|
+|2     |  le_decoder |sevseg_dec |     7|
+|3     |  my_ram     |lab2mem    |     8|
++------+-------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 642.723 ; gain = 430.008
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 642.723 ; gain = 135.609
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 642.723 ; gain = 430.008
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  RAM16X1S => RAM32X1S (RAMS32): 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 648.668 ; gain = 407.293
+INFO: [Common 17-1381] The checkpoint 'D:/ENGG_3380/ENGG3380-Labs/Lab3/Lab3_HW_Demo/Lab3_HW_Demo.runs/synth_1/HW_Demo_Main.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 648.668 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 10 20:26:16 2024...
