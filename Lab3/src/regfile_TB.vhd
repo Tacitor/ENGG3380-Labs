@@ -20,7 +20,7 @@ component regfile is
 		WE, CLK: in std_logic);
 end component;
 
-constant tick : time := 10 ns;
+constant tick : time := 5 ns;
 
 --Declare signals
 
@@ -46,36 +46,68 @@ port map(
 
 test : process
 begin
+    
     CLK <= '0';
+    wait for tick;
     WE <= '0';
     DataIn <= "0000000000000000";
-    ReadA1 <= "0000";
-    ReadA2 <= "0000";
+    --ReadA1 <= "0000";
+    --ReadA2 <= "0000";
     WriteA <= "0000";
     CLK <= '1';
     wait for tick;
-    --write 1 in address 0
+
+    --write 1 in address 1
     CLK <= '0';
+    wait for tick;
     WE <= '1';
     DataIn <= "0000000000000001";
-    WriteA <= "0000";
+    WriteA <= "0001";
     CLK <= '1';
     wait for tick;
-    --read from register 0 at Data01 port
-    ReadA1 <= "0000";
-    WE <= '0';
-    -- DataIn <= "0000000000000010";
-    -- WriteA <= "0001";
-    -- wait for tick;
-    -- WE <= '1';
-    -- DataIn <= "0000000000000011";
-    -- WriteA <= "0001";
-    -- wait for tick;
-    -- WE <= '0';
-    -- DataIn <= "0000000000000100";
-    -- WriteA <= "0010";
+
+    --read from address 1 at Data01 port
+    CLK <= '0';
     wait for tick;
-   
+    ReadA1 <= "0001";
+    WE <= '0';
+    CLK <= '1';
+    wait for tick;
+
+    --write 2 in address 2
+    CLK <= '0';
+    wait for tick;
+    WE <= '1';
+    DataIn <= "0000000000000010";
+    WriteA <= "0010";
+    CLK <= '1';
+    wait for tick;
+
+    --read from address 2 at Data02 port
+    CLK <= '0';
+    wait for tick;
+    ReadA2 <= "0010";
+    WE <= '0';
+    CLK <= '1';
+    wait for tick;
+
+    --write 3 in address 3
+    CLK <= '0';
+    wait for tick;
+    WE <= '1';
+    DataIn <= "0000000000000011";
+    WriteA <= "0011";
+    CLK <= '1';
+    wait for tick;
+
+    --read from address3 at Data01 port
+    CLK <= '0';
+    wait for tick;
+    ReadA1 <= "0011";
+    WE <= '0';
+    CLK <= '1';
+    wait for tick;
+
     
     end process;
 
