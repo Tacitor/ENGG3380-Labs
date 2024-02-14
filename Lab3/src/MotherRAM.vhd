@@ -33,22 +33,22 @@ begin
     process(clk)
     begin
 --		-- Write-First
---        if(clk'event and clk='1') then            
---            if(we='1') then
---                memory(conv_integer(addr)) <= din; 
---                dout <= din; 
---            else
---                dout <= memory(conv_integer(addr)); 
---            end if; 
---        end if;
+        if(clk'event and clk='1') then            
+            if(we='1') then
+                memory(conv_integer(addr)) <= din; 
+                dout <= din; 
+            else
+                dout <= memory(conv_integer(addr)); 
+            end if; 
+        end if;
 		
 		-- Read-First
---		if(clk'event and clk='1') then
---            if(we='1') then
---                memory(conv_integer(addr)) <= din;
---            end if; 
---			dout <= memory(conv_integer(addr));
---        end if; 
+		if(clk'event and clk='1') then
+            if(we='1') then
+                memory(conv_integer(addr)) <= din;
+            end if; 
+			dout <= memory(conv_integer(addr));
+        end if; 
 		
 		--No-Change
 		if(clk'event and clk='1') then            
