@@ -1,7 +1,7 @@
 Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2016.3 (win64) Build 1682563 Mon Oct 10 19:07:27 MDT 2016
-| Date         : Sat Feb 10 20:27:36 2024
+| Date         : Wed Feb 14 08:54:42 2024
 | Host         : SOE-1532-19 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file HW_Demo_Main_methodology_drc_routed.rpt -rpx HW_Demo_Main_methodology_drc_routed.rpx
 | Design       : HW_Demo_Main
@@ -23,15 +23,27 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 15
-+-----------+----------+-------------------------------+------------+
-| Rule      | Severity | Description                   | Violations |
-+-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 15         |
-+-----------+----------+-------------------------------+------------+
+             Violations found: 22
++-----------+----------+--------------------------------------------+------------+
+| Rule      | Severity | Description                                | Violations |
++-----------+----------+--------------------------------------------+------------+
+| SYNTH-4   | Warning  | Shallow depth for a dedicated block RAM    | 1          |
+| SYNTH-6   | Warning  | Timing of a block RAM might be sub-optimal | 1          |
+| TIMING-18 | Warning  | Missing input or output delay              | 20         |
++-----------+----------+--------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+SYNTH-4#1 Warning
+Shallow depth for a dedicated block RAM  
+The instance my_ram/memory_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason: The depth (3 address bits) is shallow. Please use attribute (* ram_style = "distributed" *)  to instruct Vivado to infer distributed LUT RAM.
+Related violations: <none>
+
+SYNTH-6#1 Warning
+Timing of a block RAM might be sub-optimal  
+The timing for the instance my_ram/memory_reg, implemented as a block RAM, might be sub-optimal as no output register was merged into the block
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on addr_m[0] relative to clock(s) sys_clk_pin 
@@ -49,60 +61,85 @@ Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An output delay is missing on dout_out[0] relative to clock(s) sys_clk_pin 
+An input delay is missing on din_in[0] relative to clock(s) sys_clk_pin 
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An output delay is missing on dout_out[1] relative to clock(s) sys_clk_pin 
+An input delay is missing on din_in[1] relative to clock(s) sys_clk_pin 
 Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An output delay is missing on dout_out[2] relative to clock(s) sys_clk_pin 
+An input delay is missing on din_in[2] relative to clock(s) sys_clk_pin 
 Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An output delay is missing on dout_out[3] relative to clock(s) sys_clk_pin 
+An input delay is missing on din_in[3] relative to clock(s) sys_clk_pin 
 Related violations: <none>
 
 TIMING-18#8 Warning
 Missing input or output delay  
-An output delay is missing on sev_seg_out[0] relative to clock(s) sys_clk_pin 
+An input delay is missing on we_pin relative to clock(s) sys_clk_pin 
 Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An output delay is missing on sev_seg_out[1] relative to clock(s) sys_clk_pin 
+An output delay is missing on dout_out[0] relative to clock(s) sys_clk_pin 
 Related violations: <none>
 
 TIMING-18#10 Warning
 Missing input or output delay  
-An output delay is missing on sev_seg_out[2] relative to clock(s) sys_clk_pin 
+An output delay is missing on dout_out[1] relative to clock(s) sys_clk_pin 
 Related violations: <none>
 
 TIMING-18#11 Warning
 Missing input or output delay  
-An output delay is missing on sev_seg_out[3] relative to clock(s) sys_clk_pin 
+An output delay is missing on dout_out[2] relative to clock(s) sys_clk_pin 
 Related violations: <none>
 
 TIMING-18#12 Warning
 Missing input or output delay  
-An output delay is missing on sev_seg_out[4] relative to clock(s) sys_clk_pin 
+An output delay is missing on dout_out[3] relative to clock(s) sys_clk_pin 
 Related violations: <none>
 
 TIMING-18#13 Warning
 Missing input or output delay  
-An output delay is missing on sev_seg_out[5] relative to clock(s) sys_clk_pin 
+An output delay is missing on sev_seg_out[0] relative to clock(s) sys_clk_pin 
 Related violations: <none>
 
 TIMING-18#14 Warning
 Missing input or output delay  
-An output delay is missing on sev_seg_out[6] relative to clock(s) sys_clk_pin 
+An output delay is missing on sev_seg_out[1] relative to clock(s) sys_clk_pin 
 Related violations: <none>
 
 TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on sev_seg_out[2] relative to clock(s) sys_clk_pin 
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on sev_seg_out[3] relative to clock(s) sys_clk_pin 
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on sev_seg_out[4] relative to clock(s) sys_clk_pin 
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An output delay is missing on sev_seg_out[5] relative to clock(s) sys_clk_pin 
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on sev_seg_out[6] relative to clock(s) sys_clk_pin 
+Related violations: <none>
+
+TIMING-18#20 Warning
 Missing input or output delay  
 An output delay is missing on sev_seg_out[7] relative to clock(s) sys_clk_pin 
 Related violations: <none>
