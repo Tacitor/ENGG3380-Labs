@@ -35,6 +35,8 @@ entity HW_Demo_Main is
 
     port ( hundo_meg_osc: in std_logic;
            addr_m: in std_logic_vector(2 downto 0);
+           din_in: in std_logic_vector(3 downto 0);
+           we_pin: in std_logic;
            dout_out: out std_logic_vector(3 downto 0);
            sev_seg_an: out std_logic_vector(7 downto 0);
            sev_seg_out: out std_logic_vector(7 downto 0) );
@@ -58,8 +60,6 @@ architecture Structural of HW_Demo_Main is
     end COMPONENT;
     
     --signals
-    signal we_pass : std_logic := '0';
-    signal din_pass : std_logic_vector(3 downto 0) := "0000";
     signal dout_m : std_logic_vector(3 downto 0);
 
 begin
@@ -68,7 +68,7 @@ begin
 
     my_ram: lab2mem 
         generic map(4,3) 
-        port map(we_pass, hundo_meg_osc, addr_m, din_pass, dout_m);
+        port map(we_pin, hundo_meg_osc, addr_m, din_in, dout_m);
         
     dout_out <= dout_m;
         
