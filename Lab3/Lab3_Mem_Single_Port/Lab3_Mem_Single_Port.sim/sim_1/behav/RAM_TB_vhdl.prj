@@ -1,5 +1,5 @@
 # compile vhdl design source files
-vhdl2008 xil_defaultlib  "../../../../src/No-Change-Distributed-RAM.vhd"
+vhdl2008 xil_defaultlib  "../../../../src/MotherRAM.vhd"
 vhdl xil_defaultlib  "../../../../src/RAM_TB.vhd"
 
 # Do not sort compile order
