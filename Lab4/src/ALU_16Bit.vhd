@@ -14,7 +14,7 @@ End;
 
 Architecture behavior of ALU_16Bit is
 	COMPONENT ALU
-	port(	
+    port(	 
 		A		:	in		std_logic;
 		B		:	in		std_logic;
 		Cin	:	in		std_logic;
