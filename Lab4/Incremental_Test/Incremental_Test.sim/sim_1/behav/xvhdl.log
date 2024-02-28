@@ -1,0 +1,16 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab4/Incremental_Test/Incremental_Test.srcs/sources_1/imports/Lab4/ALU2EB/ALU2EB.srcs/sources_1/new/xor_gate.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity xor_gate
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab4/Incremental_Test/Incremental_Test.srcs/sources_1/imports/Lab4/src/or_gate.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity or_gate
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab4/Incremental_Test/Incremental_Test.srcs/sources_1/imports/Lab4/src/full_adder1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity full_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab4/Incremental_Test/Incremental_Test.srcs/sources_1/imports/Lab4/src/and_gate.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity and_gate
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab4/Incremental_Test/Incremental_Test.srcs/sources_1/new/SLT_Mux.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity SLT_Mux
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab4/Incremental_Test/Incremental_Test.srcs/sources_1/imports/new/B1ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity B1ALU
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab4/Incremental_Test/Incremental_Test.srcs/sources_1/imports/new/ALU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab4/Incremental_Test/Incremental_Test.srcs/sources_1/new/TestFile.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity TestFile

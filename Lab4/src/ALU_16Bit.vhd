@@ -39,12 +39,12 @@ Begin
 
 	alu08	:	ALU	port map(A(8),		B(8),		Carry(7),	S,	Sout(8),		Carry(8));
 	alu09	:	ALU	port map(A(9),		B(9),		Carry(8),	S,	Sout(9),		Carry(9));
-	alu10	:	ALU	port map(A(10),	B(10),	Carry(9),	S,	Sout(10),	Carry(10));
-	alu11	:	ALU	port map(A(11),	B(11),	Carry(10),	S,	Sout(11),	Carry(11));
+	alu10	:	ALU	port map(A(10),		B(10),		Carry(9),	S,	Sout(10),		Carry(10));
+	alu11	:	ALU	port map(A(11),		B(11),		Carry(10),	S,	Sout(11),		Carry(11));
 
-	alu12	:	ALU	port map(A(12),	B(12),	Carry(11),	S,	Sout(12),	Carry(12));
-	alu13	:	ALU	port map(A(13),	B(13),	Carry(12),	S,	Sout(13),	Carry(13));
-	alu14	:	ALU	port map(A(14),	B(14),	Carry(13),	S,	Sout(14),	Carry(14));
-	alu15	:	ALU	port map(A(15),	B(15),	Carry(14),	S,	Sout(15),	Cout);
+	alu12	:	ALU	port map(A(12),		B(12),		Carry(11),	S,	Sout(12),		Carry(12));
+	alu13	:	ALU	port map(A(13),		B(13),		Carry(12),	S,	Sout(13),		Carry(13));
+	alu14	:	ALU	port map(A(14),		B(14),		Carry(13),	S,	Sout(14),		Carry(14));
+	alu15	:	ALU	port map(A(15),		B(15),		Carry(14),	S,	Sout(15),		Cout);
 End;
 	
