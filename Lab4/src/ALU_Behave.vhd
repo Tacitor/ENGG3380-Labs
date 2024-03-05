@@ -18,7 +18,8 @@ Architecture behavior of ALU is
 
 	Begin
 	Process (In1, In2, Sel, Cin)
-	variable sum : signed(Dwidth downto 0); -- variable to hold sum with extra bit for overflow
+	--variable sum : signed(Dwidth downto 0); -- variable to hold sum with extra bit for overflow
+	variable sum : integer := 0;
 	--variable signedIn1 : signed(Dwidth-1 downto 0);
 	--variable signedIn2 : signed(Dwidth-1 downto 0); --turns out don't need
 	
@@ -39,7 +40,8 @@ Architecture behavior of ALU is
 			--signed ADD
 			When "011" => ALU_OUT <= In1 + In2;	
 			--check for overflow
-			sum := '0'& signed(In1) + '0' & signed(In2); -- extend to extra bit length to match sum size THIS IS NOT WORKING
+			--sum := '0'& signed(In1) + '0' & signed(In2); -- extend to extra bit length to match sum size THIS IS NOT WORKING
+			sum := to_integer(unsigned(In1)) + to_integer(unsigned(In2));
 			if (sum > (2**(Dwidth-1)-1)) or (sum < -(2**(Dwidth-1))) then --extra bit of negative
 				OVF <= '1';
 			else
@@ -55,7 +57,8 @@ Architecture behavior of ALU is
 			--signed SUB
 			When "101" => ALU_OUT <= In1 - In2;
 			--check for overflow
-			sum :='0'& signed(In1) + '0' & signed(In2); -- extend to extra bit length to match sum size
+			--sum :='0'& signed(In1) + '0' & signed(In2); -- extend to extra bit length to match sum size
+			sum := to_integer(unsigned(In1)) + to_integer(unsigned(In2));
 			if (sum > (2**(Dwidth-1))-1) or (sum < -(2**(Dwidth-1))) then --extra bit of negative
 				OVF <= '1';
 			else
