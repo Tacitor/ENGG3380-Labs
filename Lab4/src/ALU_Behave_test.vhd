@@ -48,7 +48,12 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
-   begin		
+   begin
+	
+		-- OVF <= '0';
+		-- Zero <= '0';
+		-- wait for 100 ns;
+
 		A		<=	x"01";	-- 1
 		B		<=	x"01";	-- 1
 		Cin	    <=	'0';
@@ -73,14 +78,23 @@ BEGIN
 		S		<=	"010";		-- Unsigned Add
 		wait for 100 ns;	
 
-		A		<=	x"01";	-- 2
-		B		<=	x"FF";	-- 1
+		A		<=	x"01";	-- 1
+		B		<=	x"FF";	-- -1 in two's complement
 		Cin	    <=	'0';
 		S		<=	"011";		-- signed Add
 		wait for 100 ns;	
 
+		A		<=	x"02";	-- 2
+		B		<=	x"01";	-- -1 
+		Cin	    <=	'0';
+		S		<=	"101";		-- signed sub
+		wait for 100 ns;	
 
-
+		A		<=	x"80";	-- most negative signed number
+		B		<=	x"01";	-- 1 
+		Cin	    <=	'0';
+		S		<=	"101";		-- signed sub
+		wait for 100 ns;	
 
 		wait;
    end process;
