@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Tue Mar 05 16:58:09 2024
+# Process ID: 10484
+# Current directory: Q:/ENGG3380-Labs/Lab4/16BitALU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7384 Q:\ENGG3380-Labs\Lab4\16BitALU\16BitALU.xpr
+# Log file: Q:/ENGG3380-Labs/Lab4/16BitALU/vivado.log
+# Journal file: Q:/ENGG3380-Labs/Lab4/16BitALU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Q:/ENGG3380-Labs/Lab4/16BitALU/16BitALU.xpr
+launch_simulation
+open_wave_config Q:/ENGG3380-Labs/Lab4/16BitALU/ALU_16Bit_Simulation.wcfg
+source ALU_16Bit_test.tcl
+close_sim

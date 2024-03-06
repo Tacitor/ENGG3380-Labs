@@ -1,0 +1,46 @@
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Unable to capture context for thread 7544 in process 232, can not generate back trace
+Unable to capture context for thread 3560 in process 232, can not generate back trace
+Unable to capture context for thread 21228 in process 232, can not generate back trace
+Exception at PC 0x00007FFD82E0BB93
+Printing stacktrace...
+
+Unable to capture context for thread 7544 in process 232, can not generate back trace
+Unable to capture context for thread 3560 in process 232, can not generate back trace
+Unable to capture context for thread 21228 in process 232, can not generate back trace
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+[0]  [0x00007FFD82E0BB93]
+[1]  [0x00007FFD82E0BB93]
+[2]  [0x00007FFD82E0B4A1]
+[3]  [0x00007FFD82E0B3EF]
+[4]  [0x00007FFD82DF19FE]
+[5]  [0x00007FFD82DF0ED1]
+[6]  [0x00007FFD82DF0D76]
+[7]  [0x00007FFD82D979F6]
+[8]  [0x00007FFD82D87AFB]
+[9]  [0x00007FFD82EAE90A]
+[10]  [0x00007FFD82EC9F87]
+[11]  [0x00007FFD82ECA05F]
+[12] (BaseThreadInitThunk+0x1d) [0x00007FFE6AFF257D]
+[13] (RtlUserThreadStart+0x28) [0x00007FFE6B6AAA58]
+Done
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C
+Exception at PC 0x00007FFE68CE5B0C

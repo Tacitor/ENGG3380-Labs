@@ -1,0 +1,14 @@
+0.6
+2016.3
+Oct 10 2016
+19:46:48
+Q:/ENGG3380-Labs/Lab4/ALU_Structural/project_1.srcs/sources_1/imports/src/ALU_Out_Mux.vhd,1709696166,vhdl,,,,slt_mux,,,,,,,,
+Q:/ENGG3380-Labs/Lab4/ALU_Structural/project_1.srcs/sources_1/imports/src/ALU_Struct.vhd,1709689933,vhdl,,,,alu,,,,,,,,
+Q:/ENGG3380-Labs/Lab4/ALU_Structural/project_1.srcs/sources_1/imports/src/ALU_Test.vhd,1709703225,vhdl,,,,,,,,,,,,
+Q:/ENGG3380-Labs/Lab4/ALU_Structural/project_1.srcs/sources_1/imports/src/B1ALU.vhd,1709691150,vhdl,,,,b1alu,,,,,,,,
+Q:/ENGG3380-Labs/Lab4/ALU_Structural/project_1.srcs/sources_1/imports/src/MultiBit_Nor_Gate.vhd,1709154287,vhdl,,,,multibit_nor,,,,,,,,
+Q:/ENGG3380-Labs/Lab4/ALU_Structural/project_1.srcs/sources_1/imports/src/and_gate.vhd,1707920304,vhdl,,,,and_gate,,,,,,,,
+Q:/ENGG3380-Labs/Lab4/ALU_Structural/project_1.srcs/sources_1/imports/src/full_adder1.vhd,1707920306,vhdl,,,,full_adder,,,,,,,,
+Q:/ENGG3380-Labs/Lab4/ALU_Structural/project_1.srcs/sources_1/imports/src/or_gate.vhd,1707920309,vhdl,,,,or_gate,,,,,,,,
+Q:/ENGG3380-Labs/Lab4/ALU_Structural/project_1.srcs/sources_1/imports/src/xor_gate.vhd,1709095921,vhdl,,,,xor_gate,,,,,,,,
+Q:/ENGG3380-Labs/Lab4/ALU_Structural/project_1.srcs/sources_1/new/ALU_1bit_Test.vhd,1709683857,vhdl,Q:/ENGG3380-Labs/Lab4/ALU_Structural/project_1.srcs/sources_1/imports/src/ALU_Test.vhd,,,alu_test,,,,,,,,

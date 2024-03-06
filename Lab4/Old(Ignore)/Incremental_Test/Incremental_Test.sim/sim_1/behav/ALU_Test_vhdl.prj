@@ -1,0 +1,13 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../Incremental_Test.srcs/sources_1/imports/Lab4/ALU2EB/ALU2EB.srcs/sources_1/new/xor_gate.vhd"
+vhdl xil_defaultlib  "../../../Incremental_Test.srcs/sources_1/imports/Lab4/src/or_gate.vhd"
+vhdl xil_defaultlib  "../../../Incremental_Test.srcs/sources_1/imports/Lab4/src/full_adder1.vhd"
+vhdl xil_defaultlib  "../../../Incremental_Test.srcs/sources_1/imports/Lab4/src/and_gate.vhd"
+vhdl xil_defaultlib  "../../../Incremental_Test.srcs/sources_1/new/SLT_Mux.vhd"
+vhdl xil_defaultlib  "../../../Incremental_Test.srcs/sources_1/new/MultiBit_And_Gate.vhd"
+vhdl xil_defaultlib  "../../../Incremental_Test.srcs/sources_1/imports/new/B1ALU.vhd"
+vhdl xil_defaultlib  "../../../Incremental_Test.srcs/sources_1/imports/new/ALU.vhd"
+vhdl xil_defaultlib  "../../../Incremental_Test.srcs/sources_1/new/ALU_Test.vhd"
+
+# Do not sort compile order
+nosort
