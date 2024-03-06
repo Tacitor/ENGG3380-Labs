@@ -1,12 +1,12 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  "../../../project_1.srcs/sources_1/imports/src/xor_gate.vhd"
 vhdl xil_defaultlib  "../../../project_1.srcs/sources_1/imports/src/or_gate.vhd"
-vhdl xil_defaultlib  "../../../project_1.srcs/sources_1/imports/src/and_gate.vhd"
 vhdl xil_defaultlib  "../../../project_1.srcs/sources_1/imports/src/full_adder1.vhd"
+vhdl xil_defaultlib  "../../../project_1.srcs/sources_1/imports/src/and_gate.vhd"
+vhdl xil_defaultlib  "../../../project_1.srcs/sources_1/new/ALU_Out_1Bit_Mux.vhd"
 vhdl xil_defaultlib  "../../../project_1.srcs/sources_1/imports/src/B1ALU.vhd"
 vhdl xil_defaultlib  "../../../project_1.srcs/sources_1/imports/src/MultiBit_Nor_Gate.vhd"
 vhdl xil_defaultlib  "../../../project_1.srcs/sources_1/imports/src/ALU_Out_Mux.vhd"
-vhdl xil_defaultlib  "../../../project_1.srcs/sources_1/new/ALU_1bit_Test.vhd"
 vhdl xil_defaultlib  "../../../project_1.srcs/sources_1/imports/src/ALU_Struct.vhd"
 vhdl xil_defaultlib  "../../../project_1.srcs/sources_1/imports/src/ALU_Test.vhd"
 

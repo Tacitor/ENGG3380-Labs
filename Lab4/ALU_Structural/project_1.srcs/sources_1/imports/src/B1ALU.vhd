@@ -54,7 +54,20 @@ architecture Behavioral of B1ALU is
         );
     end component;
 
-
+    component ALU_Out_1Bit_Mux
+    port(
+           And_Out : in STD_LOGIC;
+           Or_Out : in STD_LOGIC;
+           AddU_Out : in STD_LOGIC;
+           Add_Out : in STD_LOGIC;
+           Xor_Out : in STD_LOGIC;
+           Sub_Out : in STD_LOGIC;
+           SLT_Out : in STD_LOGIC;
+           BEQ_Out : in STD_LOGIC;
+           Sel     : in STD_LOGIC_VECTOR(2 DOWNTO 0);
+           ALU_Out : out STD_LOGIC
+        );
+    end component;
 signal andOut, orOut, FAOut, xorOut, NB, output_sig: STD_LOGIC;
 
 begin
@@ -66,13 +79,16 @@ OutOr   :   or_gate     port map(In1 => In1,    In2 => In2,  Sout => orOut);
 OutFA   :   full_adder  port map(A   => In1,    B => NB,     Cin  => Cin,   Sout => FAOut,  Cout => Cout);                
 OutXor  :   xor_gate    port map(In1 => in1,    In2 => in2,  Sout => XorOut);
 
-ALU_OUT <= AndOut when sel="000" else -- And
-            OrOut when sel="001" else -- Or
-            FAOut when sel="010" else -- Unsigned Add
-            FAOut when sel="011" else -- Signed Add
-           XorOut when sel="100" else -- Xor
-            FAOut when sel="101" else -- Signed Sub
-            FAOut when sel="110" else -- SLT
-            FAOut when sel="111"; -- BEQ
+Out_Mux :   ALU_Out_1Bit_Mux port map(
+           And_Out  => AndOut,
+           Or_Out   => OrOut,
+           AddU_Out => FAOut,
+           Add_Out  => FAOut,
+           Xor_Out  => XorOut,
+           Sub_Out  => FAOut,
+           SLT_Out  => FAOut,
+           BEQ_Out  => FAOut,
+           Sel      => Sel,
+           ALU_Out  =>ALU_Out);
 
 end Behavioral;

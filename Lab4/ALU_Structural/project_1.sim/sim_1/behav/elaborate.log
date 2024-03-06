@@ -16,6 +16,7 @@ Compiling architecture behavior of entity xil_defaultlib.and_gate [and_gate_defa
 Compiling architecture behavior of entity xil_defaultlib.or_gate [or_gate_default]
 Compiling architecture behavior of entity xil_defaultlib.full_adder [full_adder_default]
 Compiling architecture behavioral of entity xil_defaultlib.xor_gate [xor_gate_default]
+Compiling architecture behavioral of entity xil_defaultlib.ALU_Out_1Bit_Mux [alu_out_1bit_mux_default]
 Compiling architecture behavioral of entity xil_defaultlib.B1ALU [b1alu_default]
 Compiling architecture behavioral of entity xil_defaultlib.MultiBit_Nor [multibit_nor_default]
 Compiling architecture behavioral of entity xil_defaultlib.SLT_Mux [slt_mux_default]
