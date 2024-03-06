@@ -3,7 +3,7 @@ Use ieee.std_logic_1164.all;
 Use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.all;
 
-Entity ALU is
+Entity ALU_8Bit is
 generic (Dwidth : integer := 8);
 port(	
 		In1, In2	:	in	std_logic_vector (Dwidth-1 downto 0);
@@ -14,7 +14,7 @@ port(
 End;
 
 
-Architecture behavior of ALU is
+Architecture behavior of ALU_8Bit is
 
 	Begin
 	Process (In1, In2, Sel, Cin)
@@ -74,7 +74,7 @@ Architecture behavior of ALU is
 			When "111" =>  Zero <= '1' when In1 = In2 else '0';
 
 			--Catch all if void selection line output all ZEROS
-			When Others => ALU_OUT <= (8 downto 0 => '0');
+			When Others => ALU_OUT <= (7 downto 0 => '0');
 		End Case;
 	End Process;
 	
