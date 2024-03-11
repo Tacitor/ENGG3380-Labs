@@ -68,7 +68,7 @@ stim_proc   :   process
     -- Demonstrates alternate transfer method,
     -- Oring with 0s allows for a transfer of bits.
     IN1     <=  "10110000"; -- 240
-    IN2     <=  "00000000"; -- 0
+    IN2     <=  "00001101"; -- 0
     SEL     <=  "001"; -- OR
     wait for period;
     
@@ -134,6 +134,12 @@ stim_proc   :   process
     IN2     <=  "01000000"; -- 64
     SEL     <=  "110"; -- SLT
     wait for period;
+    
+    -- expected normal 1 output
+    IN1     <=  "00000010"; -- 2
+    IN2     <=  "00000100"; -- 4
+    SEL     <=  "110"; -- SLT
+    wait for period;    
     
     -- Test for OVF
     IN1     <=  "01000000"; -- 64

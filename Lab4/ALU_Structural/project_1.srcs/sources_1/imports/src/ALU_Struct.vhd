@@ -46,8 +46,8 @@ begin
 -- Check if subtraction is needed for operations: Subtraction(101), SLT(110), BEQ(111), XOR does not use carry in.
 subcheck <= sel(2);
 
--- Check for signed operations (011, 101, 110, 111).
-signage <= (Sel(2) or (not Sel(2) and Sel(1) and Sel(0))) and not (Sel(2) and not Sel(1) and not Sel(0));
+-- Check for arithmetic operations (011, 101, 110, 111, 010).
+signage <= (Sel(2) or (not Sel(2) and Sel(1) and Sel(0)) or (not sel(2) and sel(1) and not sel(0)));
 
 -- Generate outputs for each bit
 ALU0 : B1ALU port map(IN1 =>in1(0),     IN2 =>in2(0),   ALU_OUT => ALU_Out_Sig(0), SEL => sel, CIN => subcheck,   COUT => carry(0),   Sub => subcheck);     
