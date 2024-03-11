@@ -22,7 +22,7 @@ architecture Behavioral OF CPU_3380 IS
 		);
 	END COMPONENT;
 
-	COMPONENT RegisterFile
+	COMPONENT Registers
 		PORT(
 			clk			:	IN	 STD_LOGIC;													-- positive edge triggered clock
 			clear		:	IN   STD_LOGIC;													-- asynchronous reset
@@ -59,7 +59,7 @@ BEGIN
 	--------------------------------------------------------------------------
 	-- Instruction Decode
 	--------------------------------------------------------------------------
-	CPU_Registers_0:	RegisterFile port map(
+	CPU_Registers_0:	Registers port map(
 	-- TODO: Map the following register file signals to their corresponding ALU signals: clk, clear, rd, Sout_ALU,, rs, rt, rs_data, rt_data, '1'
 
 
