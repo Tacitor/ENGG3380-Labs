@@ -45,6 +45,7 @@ stim_proc   :   process
     begin
     
 -- And Tests
+    -- Check for Zero Flag
     IN1     <=	"00000000"; -- 0
     IN2     <=  "11111111"; -- 255
     SEL     <=  "000"; -- AND
@@ -58,20 +59,22 @@ stim_proc   :   process
     
     
 -- Or Tests
-    IN1     <=  "01010101"; -- 85
-    IN2     <=  "10101010"; -- 170
+    -- Check for zero flag
+    IN1     <=  "00000000"; -- 0
+    IN2     <=  "00000000"; -- 0
     SEL     <=  "001"; -- OR
     wait for period;
     
     -- Demonstrates alternate transfer method,
     -- Oring with 0s allows for a transfer of bits.
     IN1     <=  "10110000"; -- 240
-    IN2     <=  "00000000"; -- 0
+    IN2     <=  "00001101"; -- 0
     SEL     <=  "001"; -- OR
     wait for period;
     
     
 -- Unsigned Add Tests
+    -- Check for zero flag
     IN1     <=  "01000000"; -- 64
     IN2     <=  "11000000"; -- -64
     SEL     <=  "010"; -- Unsigned Add
@@ -85,6 +88,7 @@ stim_proc   :   process
     
     
 -- Signed Add Tests
+    -- Check for zero flag
     IN1     <=  "01000000"; -- 64
     IN2     <=  "11000000"; -- -64
     SEL     <=  "011"; -- Signed Add
@@ -98,8 +102,8 @@ stim_proc   :   process
     
     
 -- Xor Tests
-    IN1     <=  "01011100"; -- 92
-    IN2     <=  "10101100"; -- 172
+    IN1     <=  "11111111"; -- 255
+    IN2     <=  "11111111"; -- 255
     SEL     <=  "100"; -- Xor
     wait for period;
     
@@ -111,8 +115,9 @@ stim_proc   :   process
 
 
 -- Signed Sub Tests
+    -- Check for zero flag
     IN1     <=  "01000000"; -- 64
-    IN2     <=  "00110010"; -- -50
+    IN2     <=  "01000000"; -- 64
     SEL     <=  "101"; -- Signed Sub
     wait for period;
     
@@ -120,14 +125,21 @@ stim_proc   :   process
     IN1     <=  "01000000"; -- 64
     IN2     <=  "11000000"; -- -64
     SEL     <=  "101"; -- Signed Sub
-    wait for period;  
+    wait for period;
 
 
 -- Set on Less Than Tests
+    -- check for zero flag
     IN1     <=  "01000000"; -- 64
-    IN2     <=  "00110010"; -- 50
+    IN2     <=  "01000000"; -- 64
     SEL     <=  "110"; -- SLT
     wait for period;
+    
+    -- expected normal 1 output
+    IN1     <=  "00000010"; -- 2
+    IN2     <=  "00000100"; -- 4
+    SEL     <=  "110"; -- SLT
+    wait for period;    
     
     -- Test for OVF
     IN1     <=  "01000000"; -- 64
@@ -137,6 +149,7 @@ stim_proc   :   process
 
 
 -- Branch if Equal Tests
+    -- Check for zero flag
     IN1     <=  "00000000"; -- 0
     IN2     <=  "00000000"; -- 0
     SEL     <=  "111"; -- SLT

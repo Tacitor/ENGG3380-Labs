@@ -1,11 +1,11 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity ALU_Test is
+entity ALU_Extra_Test is
   generic (Dwidth   :   integer := 8);
-end ALU_Test;
+end ALU_Extra_Test;
 
-architecture Behavioral of ALU_Test is
+architecture Behavioral of ALU_Extra_Test is
     --Unit Under Test
     component ALU 
         Port    (   IN1, IN2   :    IN  STD_LOGIC_VECTOR    (Dwidth-1 downto 0);
