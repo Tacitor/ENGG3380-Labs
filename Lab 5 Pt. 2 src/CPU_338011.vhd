@@ -127,20 +127,22 @@ begin
 		a_data		=>		alu_result,
 		load		=>		ctrl_reg_load,
 		b_addr		=>		rs,
-		c_addr		=>		,
+		c_addr		=>		reg_dest_mux_out,
 		b_data		=>		rs_data,
 		c_data		=>		rt_data
 	);
 
 -- TODO 5: Implement the complete port map for the signextend
-    sign_extender: Signextend port map(rt, sign_ex_out);
+    sign_extender: Signextend port map(
+    immIn   => rt, 
+    immOut  => sign_ex_out);
 
 
 CPU_reg_dest_mux:		mux2_1 generic map(4) port map(
-	Input1		=>		rt,
-	Input2		=>		rd,
-	S				=>		ctrl_reg_dest,
-	Sout			=>		reg_dest_mux_out
+	Input1		=>		rt, --IFF rt goes to a register it ALWAYS goes to C
+	Input2		=>		rd, --rd is ALWAYS A and sometimes it C too
+	S			=>		ctrl_reg_dest,
+	Sout		=>		reg_dest_mux_out
 );
 
 	--------------------------------------------------------------------------
