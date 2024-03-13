@@ -118,6 +118,15 @@ begin
 	-- Instruction Decode
 	--------------------------------------------------------------------------
 	-- TODO 3: Implement the complete port map for the control
+	le_control: Control port map(
+                    op          => op,
+                    alu_op      => ctrl_alu_op,
+                    alu_src     => ctrl_alu_src,
+                    reg_dest    => ctrl_reg_dest,
+                    reg_load    => ctrl_reg_load,
+                    reg_src     => ctrl_reg_src,
+                    mem_read    => ctrl_mem_read,
+                    mem_write   => ctrl_mem_write);
 
 	-- TODO 4: Finish the port map for the register file
 	CPU_Registers_0:		Registers port map(
@@ -132,14 +141,14 @@ begin
 		c_data		=>		rt_data
 	);
 
--- TODO 5: Implement the complete port map for the signextend
+    -- TODO 5: Implement the complete port map for the signextend
     sign_extender: Signextend port map(
     immIn   => rt, 
     immOut  => sign_ex_out);
 
 
 CPU_reg_dest_mux:		mux2_1 generic map(4) port map(
-	Input1		=>		rt, --IFF rt goes to a register it ALWAYS goes to C
+	Input1		=>		rt, --IF and only IF rt goes to a register it ALWAYS goes to C
 	Input2		=>		rd, --rd is ALWAYS A and sometimes it C too
 	S			=>		ctrl_reg_dest,
 	Sout		=>		reg_dest_mux_out
