@@ -97,7 +97,7 @@ BEGIN
 		wait for 100 ns;	
 		
 		A		<=	x"01";	-- 1
-		B		<=	x"FF";	-- -1 in two's complement
+		B		<=	x"FC";	-- -1 in two's complement
 		Cin	    <=	'0';
 		S		<=	"011";		-- signed Add
 		wait for 100 ns;

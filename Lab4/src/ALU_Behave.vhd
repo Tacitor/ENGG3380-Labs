@@ -26,9 +26,11 @@ Architecture behavior of ALU_8Bit is
 	Begin
 	    --signedIn1 := signed(In1); --turns out don't need
 	    --signedIn2 := signed(In2);
+	    			
 		Case Sel is
 			--AND
 			When "000" => ALU_OUT <= In1 and In2;
+			
 
 			--OR
 			When "001" => ALU_OUT <= In1 or In2;
@@ -70,13 +72,26 @@ Architecture behavior of ALU_8Bit is
 			When "110" => ALU_OUT <= "00000001" when (In1 < In2) else "00000000";
 
 			--BEQ
-			--Comment in document about making this independent of the selection input?
+			--Comment in document about making this independent of the selection input? Yes do this.
 			When "111" =>  Zero <= '1' when In1 = In2 else '0';
 
 			--Catch all if void selection line output all ZEROS
 			When Others => ALU_OUT <= (7 downto 0 => '0');
+			
 		End Case;
+		Zero <= '1' when (In1 = In2) else '0';
+		--Zero
+		
+		
 	End Process;
+	
+--	process (ALU_OUT)
+--	begin
+--	case ALU_OUT is 
+--	   when "00000000" => zero <= '1';
+--	   when Others => zero <= '0';
+--	end case;	
+--	end process;
 	
 
 End behavior;

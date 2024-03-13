@@ -57,43 +57,57 @@ BEGIN
 		A		<=	x"01";	-- 1
 		B		<=	x"01";	-- 1
 		Cin	    <=	'0';
-		S		<=	"000";		-- AND
+		S		<=	"000";-- AND
+		--OVF <= '0';
+		--Zero <= '0';		
 		wait for 100 ns;
 
 		A		<=	x"01";	-- 1
 		B		<=	x"00";	-- 0
 		Cin	    <=	'0';
 		S		<=	"001";		-- OR
+		--OVF <= '0';
+		--Zero <= '0';
 		wait for 100 ns;
 
 		A		<=	x"01";	-- 1
-		B		<=	x"FF";	-- 1
+		B		<=	x"FE";	-- 255
 		Cin	    <=	'0';
 		S		<=	"010";		-- Unsigned Add
+		--OVF <= '0';
+		--Zero <= '0';
 		wait for 100 ns;
 		
 		A		<=	x"02";	-- 2
-		B		<=	x"FF";	-- 1
+		B		<=	x"FF";	-- 255
 		Cin	    <=	'0';
 		S		<=	"010";		-- Unsigned Add
+		--OVF <= '0';
+		--Zero <= '0';
 		wait for 100 ns;	
 
 		A		<=	x"01";	-- 1
 		B		<=	x"FF";	-- -1 in two's complement
 		Cin	    <=	'0';
 		S		<=	"011";		-- signed Add
+		--OVF <= '0';
+		--Zero <= '0';
 		wait for 100 ns;	
 
 		A		<=	x"02";	-- 2
-		B		<=	x"01";	-- -1 
+		B		<=	x"01";	-- 1 
 		Cin	    <=	'0';
 		S		<=	"101";		-- signed sub
+		-- OVF <= '0';
+		-- Zero <= '0';
 		wait for 100 ns;	
 
 		A		<=	x"80";	-- most negative signed number
 		B		<=	x"01";	-- 1 
 		Cin	    <=	'0';
 		S		<=	"101";		-- signed sub
+		-- OVF <= '0';
+		-- Zero <= '0';
 		wait for 100 ns;	
 
 		wait;
