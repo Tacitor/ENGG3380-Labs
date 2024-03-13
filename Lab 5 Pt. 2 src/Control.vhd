@@ -90,9 +90,9 @@ begin
 			-- op=8, LW
 			when x"8" =>
 				alu_op		<=	"00";       --add the base to the offset
-				alu_src		<=	'1';        --
-				reg_dest	<=	'0';
-				reg_load	<=	'1';
+				alu_src		<=	'1';        --set the ALU src to the immidate value
+				reg_dest	<=	'0';        --set the register dest to 0 so it pulls from Rt not that it matters to LW
+				reg_load	<=	'1';        --set the load on the resister so the value can be loaded into it from memory
 				reg_src		<=	"00";
 				mem_read	<=	'1';
 				mem_write	<=	'0';
@@ -101,22 +101,22 @@ begin
 			-- op=C, SW
 			when x"C" =>
 				alu_op	    <=	"00";     --add the base to the offset
-                alu_src     <=    '0';
-                reg_dest    <=    '0';
-                reg_load    <=    '0';
+                alu_src     <=    '1';    --set the ALU src to the immidate value
+                reg_dest    <=    '0';    --set the register dest to 0 so it pulls from Rt not that it matters to SW
+                reg_load    <=    '0';    --keep the load off on the residter so nothing get written to it since we are writting out to memory
                 reg_src     <=    "00";
                 mem_read    <=    '0';
-                mem_write   <=    '0';
+                mem_write   <=    '1';
 
 			-- op=7, SLT
 			when x"7" =>
-				alu_op		<= "01";
-				alu_src		<= '0';
-				reg_dest	<= '0';
-				reg_load	<= '1';
-				reg_src		<= "10";
-				mem_read	<= '0';
-				mem_write	<= '0';
+				alu_op		<= "01";    --we want a SUB operation
+				alu_src		<= '0';     --get ALU src from the c_data output 
+				reg_dest	<= '0';     --get the c_addr from 3:0 from the operation
+				reg_load	<= '1';     --load the result of the ALU back into the a_data
+				reg_src		<= "10";    --send the data from the SLT operation (probably the LESS THAN flag from the CPU) to the register
+				mem_read	<= '0';     --disable mem read
+				mem_write	<= '0';     --disable mem write
 
 			when others =>
 				alu_op	    <=	"00";
