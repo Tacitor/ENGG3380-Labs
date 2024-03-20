@@ -24,31 +24,40 @@ BEGIN
         reset <= '1';
 
         -- ADD r2, r1, r1
-        instruction <= x"0211"; WAIT FOR tick;
+        instruction <= x"0211"; WAIT FOR tick; --put a "2" into r2
 
         -- ADD r3, r2, r1
-        instruction <= x"0321"; WAIT FOR tick;
+        instruction <= x"0321"; WAIT FOR tick; --put a "3" into r3
 
-        -- ADD r4, r3, r2
-        instruction <= x"0432"; WAIT FOR tick;
+        -- Sub r4, r3, r1
+        instruction <= x"1431"; WAIT FOR tick; --result of "2" put into r4
 
-        -- Sub r5, r4, r3
-        instruction <= x"1543"; WAIT FOR tick;
+        -- Sub r1, r4, r2
+        instruction <= x"1142"; WAIT FOR tick; --get a results of "0", try to store into r1. this won't work r1 will stay "1"
 
-        -- Sub r1, r5, r1
-        instruction <= x"1151"; WAIT FOR tick;
+		  -- And r5, r3, r4
+        instruction <= x"2534"; WAIT FOR tick; --put a value of "2" into r5
 
-        -- Sub r0, r3, r0
-        instruction <= x"1030"; WAIT FOR tick;
+		  -- And r6, r5, r1
+        instruction <= x"2651"; WAIT FOR tick; --put a value of "0" into r6
+        
+          -- ADDi r7, r0, "+7"
+        instruction <= x"4707"; WAIT FOR tick; --put a value of "7" into r7
+                
+          -- ADDi r7, r7, "+7"
+        instruction <= x"4777"; WAIT FOR tick; --put a value of "14"="000E" into r7
+        
+          -- SUBi r8, r7, "-8"
+        instruction <= x"5878"; WAIT FOR tick; --put a value of "22"="0016" into r8
+                
+          -- SUBi r9, r8, "2"
+        instruction <= x"5982"; WAIT FOR tick; --put a value of "20"="0014" into r9
 
-		  -- And r6, r1, r1
-        instruction <= x"2611"; WAIT FOR tick;
-
-		  -- And r7, r3, r0
-        instruction <= x"2730"; WAIT FOR tick;
-
- 		  -- OR r8, r4, r1
-        instruction <= x"3841"; WAIT FOR tick;
+ 		  -- OR r6, r9, r2
+        instruction <= x"3692"; WAIT FOR tick; --put a value of "22"="0016" into r6
+        
+           -- OR r10, r7, r1
+        instruction <= x"3A71"; WAIT FOR tick; --put a value of "15"="000E" into r10
         WAIT;
     END PROCESS driver;
 
