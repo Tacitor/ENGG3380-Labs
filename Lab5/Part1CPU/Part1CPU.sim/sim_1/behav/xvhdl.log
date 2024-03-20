@@ -1,0 +1,10 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab5/src/ALU11.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab5/src/Registers1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Registers
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab5/src/ALU_16Bit11.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU_16Bit
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab5/src/CPU_33801.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_3380
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab5/Part1CPU/Part1CPU.srcs/sim_1/imports/ENGG_3380_Lab_5/CPU_3380_Test1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_3380_Test

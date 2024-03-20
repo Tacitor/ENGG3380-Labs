@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Wed Mar 13 07:33:49 2024
+# Process ID: 22092
+# Current directory: Q:/ENGG3380-Labs/Lab5/Part1CPU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11196 Q:\ENGG3380-Labs\Lab5\Part1CPU\Part1CPU.xpr
+# Log file: Q:/ENGG3380-Labs/Lab5/Part1CPU/vivado.log
+# Journal file: Q:/ENGG3380-Labs/Lab5/Part1CPU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project Q:/ENGG3380-Labs/Lab5/Part1CPU/Part1CPU.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab5/Part1CPU' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IP Output Repository Path: Could not find the directory 'Q:/ENGG3380-Labs/Lab5/Part1CPU/Part1CPU.cache/ip', nor could it be found using path 'C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab5/Part1CPU/Part1CPU.cache/ip'.
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'Q:/ENGG3380-Labs/Lab5/Part1CPU/Part1CPU.ip_user_files', nor could it be found using path 'C:/Users/Lukas/OneDrive/OneDrive - University of Guelph/Documents/University of Guelph/Sem 4/ENGG3380/Git/ENGG3380-Labs/Lab5/Part1CPU/Part1CPU.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2016.3/data/ip'.
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -scan_for_includes {{C:/Users/kyure/OneDrive - University of Guelph/Sem4/ENGG_3380_Computer Organization and Design/Labs/ENGG_3380_Lab_5/CPU_3380_Test1.vhd}}
+import_files -fileset sim_1 -norecurse {{C:/Users/kyure/OneDrive - University of Guelph/Sem4/ENGG_3380_Computer Organization and Design/Labs/ENGG_3380_Lab_5/CPU_3380_Test1.vhd}}
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 13 08:38:38 2024...

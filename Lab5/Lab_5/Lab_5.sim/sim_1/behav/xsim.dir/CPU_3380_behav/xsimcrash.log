@@ -1,0 +1,46 @@
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Unable to capture context for thread 23132 in process 28232, can not generate back trace
+Unable to capture context for thread 16048 in process 28232, can not generate back trace
+Unable to capture context for thread 30984 in process 28232, can not generate back trace
+Exception at PC 0x00007FFC3DFA5B0C
+Unable to capture context for thread 23132 in process 28232, can not generate back trace
+Unable to capture context for thread 16048 in process 28232, can not generate back trace
+Unable to capture context for thread 30984 in process 28232, can not generate back trace
+Exception at PC 0x00007FFB3A01BB93
+Printing stacktrace...
+
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+[0]  [0x00007FFB3A01BB93]
+[1]  [0x00007FFB3A01BB93]
+[2]  [0x00007FFB3A01B4A1]
+[3]  [0x00007FFB3A01B3EF]
+[4]  [0x00007FFB3A0019FE]
+[5]  [0x00007FFB3A000ED1]
+[6]  [0x00007FFB3A000D76]
+[7]  [0x00007FFB39FA79F6]
+[8]  [0x00007FFB39F97AFB]
+[9]  [0x00007FFB3A0BE90A]
+[10]  [0x00007FFB3A0D9F87]
+[11]  [0x00007FFB3A0DA05F]
+[12] (BaseThreadInitThunk+0x1d) [0x00007FFC3EFB257D]
+[13] (RtlUserThreadStart+0x28) [0x00007FFC40B0AA58]
+Done
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C
+Exception at PC 0x00007FFC3DFA5B0C

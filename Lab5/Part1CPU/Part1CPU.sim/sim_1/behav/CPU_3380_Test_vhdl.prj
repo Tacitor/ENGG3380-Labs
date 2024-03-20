@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  "../../../../src/ALU11.vhd"
+vhdl2008 xil_defaultlib  "../../../../src/Registers1.vhd"
+vhdl2008 xil_defaultlib  "../../../../src/ALU_16Bit11.vhd"
+vhdl2008 xil_defaultlib  "../../../../src/CPU_33801.vhd"
+vhdl xil_defaultlib  "../../../Part1CPU.srcs/sim_1/imports/ENGG_3380_Lab_5/CPU_3380_Test1.vhd"
+
+# Do not sort compile order
+nosort

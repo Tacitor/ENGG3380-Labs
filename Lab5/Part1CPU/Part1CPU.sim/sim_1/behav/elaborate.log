@@ -1,0 +1,7 @@
+Vivado Simulator 2016.3
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2016.3/bin/unwrapped/win64.o/xelab.exe -wto 6ecb83eb39aa47afa8d468584a9edd94 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot CPU_3380_Test_behav xil_defaultlib.CPU_3380_Test -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-664] expression has 4 elements ; expected 2 [Q:/ENGG3380-Labs/Lab5/src/CPU_33801.vhd:19]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit cpu_3380_test in library work failed.

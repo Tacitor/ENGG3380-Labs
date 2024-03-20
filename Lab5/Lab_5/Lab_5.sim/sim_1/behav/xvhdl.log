@@ -1,0 +1,16 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab5/Lab_5/Lab_5.srcs/sources_1/imports/Lab5 Pt1/full_adder11.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity full_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab5/Lab_5/Lab_5.srcs/sources_1/imports/Lab5 Pt1/and_gate1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity and_gate
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab5/Lab_5/Lab_5.srcs/sources_1/imports/Lab5 Pt1/or_gate1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity or_gate
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab5/Lab_5/Lab_5.srcs/sources_1/imports/Lab5 Pt1/MUX311.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MUX31
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab5/Lab_5/Lab_5.srcs/sources_1/imports/Lab5 Pt1/ALU11.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab5/Lab_5/Lab_5.srcs/sources_1/imports/Lab5 Pt1/Registers1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Registers
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab5/Lab_5/Lab_5.srcs/sources_1/imports/Lab5 Pt1/ALU_16Bit11.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU_16Bit
+INFO: [VRFC 10-163] Analyzing VHDL file "Q:/ENGG3380-Labs/Lab5/Lab_5/Lab_5.srcs/sources_1/imports/Lab5 Pt1/CPU_33801.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_3380

@@ -1,0 +1,1 @@
+-wto "9d1be09701d84138a29cba5fbfe6284c" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "CPU_3380_behav" "xil_defaultlib.CPU_3380" -log "elaborate.log" 
