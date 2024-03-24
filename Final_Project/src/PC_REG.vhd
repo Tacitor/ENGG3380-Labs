@@ -16,7 +16,14 @@ architecture Behavioral of PC_REG is
 begin
 	process(reset, clk)
 	begin
-
-To do: write the code; if reset is zero, the output will be zero. Otherwise, at the rising edge of the clock, the input will be transfered to the output.
-	
+    -- To do: write the code; if reset is zero, the output will be zero. Otherwise, 
+    -- at the rising edge of the clock, the input will be transfered to the output.
+        if(rising_edge(clk)) THEN
+            IF(RESET = '0') THEN
+                OUTPUT <= "0000000000000000";
+            ELSE
+                OUTPUT <= INPUT;   
+            END IF;
+        end if;
+	end process;
 end Behavioral;

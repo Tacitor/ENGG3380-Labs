@@ -17,7 +17,7 @@ begin
         port map(
             clk		=> clock,
             clear	=> reset,
-				mem_dump    => mem_dump
+            mem_dump    => mem_dump
         );
 
     driver : process is
@@ -30,6 +30,7 @@ begin
 			for i in  1 to RUN_TIME loop
 				wait for tick;
 			end loop;
+			
 --			addi r3, r0, 5
 --			addi r4, r0, 2
 --			slt r11, r3, r4

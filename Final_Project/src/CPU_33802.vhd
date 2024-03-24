@@ -1,4 +1,3 @@
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_arith.all;
@@ -67,8 +66,8 @@ architecture Behavioral of CPU_3380 is
 		Input1		:	in		std_logic_vector(WIDTH-1 	downto 0);
 		Input2		:	in		std_logic_vector(WIDTH-1 	downto 0);
 		Input3		:	in		std_logic_vector(WIDTH-1 	downto 0);
-		S				:	in		std_logic_vector(1 			downto 0);
-		Sout			:	out	std_logic_vector(WIDTH-1 	downto 0));
+		S			:	in		std_logic_vector(1 			downto 0);
+		Sout		:	out	std_logic_vector(WIDTH-1 	downto 0));
 	end component;
 
 	component mux2_1
@@ -76,47 +75,54 @@ architecture Behavioral of CPU_3380 is
 	port(
 		Input1		:	in		std_logic_vector(WIDTH-1 	downto 0);
 		Input2		:	in		std_logic_vector(WIDTH-1 	downto 0);
-		S				:	in		std_logic;
-		Sout			:	out	std_logic_vector(WIDTH-1 	downto 0));
+		S			:	in		std_logic;
+		Sout		:	out	std_logic_vector(WIDTH-1 	downto 0));
 	end component;
 
 
-	component Memory
-   generic (
-       INPUT : string := "in.txt";
-       OUTPUT : string := "out.txt"
-   );
-    port (
-  	-- TODO 1: Finish implementing the memory component
-
-    );
+    component Memory
+       generic (
+           INPUT  : string := "in.txt";
+           OUTPUT : string := "out_data.txt"
+       );
+        port (
+        -- TODO 1: Finish implementing the memory component
+        clk      : in std_logic;  
+        read_en  : in std_logic;
+        write_en : in std_logic;
+        addr     : in std_logic_vector(15 downto 0);
+        data_in  : in std_logic_vector(15 downto 0);
+        data_out : out std_logic_vector(15 downto 0);
+        mem_dump : in std_logic := '0'
+        );
 	end component;
 
 	-- TODO 2: Finish implementing the program counter component
 	component PC_REG
 	port(
-		clk : in std_logic;
-		reset : in std_logic;
-		Input :
-		Output :
+        clk    : in std_logic;
+        reset  : in std_logic;
+        Input  : in std_logic_vector(15 downto 0);
+        Output : out std_logic_vector(15 downto 0)
 	);
 	end component;
 
 	-- Signals
 	signal	instruction			:	std_logic_vector(15 downto 0);
-	signal   op						:	std_logic_vector( 3 downto 0);
-	signal	rd						:	std_logic_vector( 3 downto 0);
-	signal	rs						:	std_logic_vector( 3 downto 0);
-	signal	rt						:	std_logic_vector( 3 downto 0);
+	signal   op				    :	std_logic_vector( 3 downto 0);
+	signal	rd					:	std_logic_vector( 3 downto 0);
+	signal	rs					:	std_logic_vector( 3 downto 0);
+	signal	rt					:	std_logic_vector( 3 downto 0);
 
 	signal	alu_result			:	std_logic_vector(15 downto 0);
-	signal	alu_src_mux_out	:	std_logic_vector(15 downto 0);
+	signal	alu_src_mux_out	    :	std_logic_vector(15 downto 0);
 	signal 	sign_ex_out			:	std_logic_vector(15 downto 0);
 	signal	rs_data				:	std_logic_vector(15 downto 0);
 	signal	rt_data				:	std_logic_vector(15 downto 0);
-	signal	cout					:	std_logic						  ;
+	signal	cout				:	std_logic;
+	signal  cout_PC_Plus_2_Adder:   std_logic;
 	signal	reg_dest_mux_out	:	std_logic_vector( 3 downto 0);
-	signal	reg_src_mux_out	:	std_logic_vector(15 downto 0);
+	signal	reg_src_mux_out	    :	std_logic_vector(15 downto 0);
 	signal	mem_dataout			:	std_logic_vector(15 downto 0);
 
 	signal	ctrl_alu_src		:	std_logic;
@@ -129,7 +135,7 @@ architecture Behavioral of CPU_3380 is
 
 	signal	slt_input			:	std_logic_vector(15 downto 0);
 
-	signal	reg_src_mux_input3:	std_logic_vector(15 downto 0);
+	signal	reg_src_mux_input3  :	std_logic_vector(15 downto 0);
 	signal	pc_plus_2			:	std_logic_vector(15 downto 0);
 	signal	pc_reg_output		:	std_logic_vector(15 downto 0);
 begin
@@ -138,23 +144,32 @@ begin
 	--------------------------------------------------------------------------
 
   -- TODO 3: Finish implementing the program counter port map
-	CPU_PC:					PC_REG port map(
+	CPU_PC
+	:					
+	PC_REG port map(
 		clk 			=>		clk,
 		reset			=>		clear,
-		input			=>		,
-		output		=>
+		input			=>		pc_plus_2,
+		output		    =>      pc_reg_output
 	);
-	pc_plus_2		<=
+	
+	PC_Plus_2_Adder  :   ALU_16Bit port map(
+            A                =>        rs_data,
+            B                =>        "0000000000000010",
+            S                =>        "00",
+            Sout            =>        pc_plus_2,
+            Cout            =>        cout_PC_Plus_2_Adder
+        );
 
-  -- TODO 4: Finish implementing the instruction memory
-	CPU_Instr_MEM:			Memory generic map(INPUT => "Instr.txt") port map(
-		clk			=>		clk,
-		read_en		=>		,
-		write_en		=>		,
-		addr			=>		,
-		data_in		=>		x"0000",
-		data_out		=>		,
-		mem_dump 	=>		'0'
+    -- TODO 4: Finish implementing the instruction memory
+	CPU_Instr_MEM  :  Memory generic map(INPUT => "Instr.txt") port map(
+		clk			    =>		clk,
+		read_en		    =>		'1',
+		write_en		=>		'0',
+		addr			=>		pc_reg_output,
+		data_in		    =>		x"0000",
+		data_out	 	=>		instruction,
+		mem_dump 	    =>		'0'
 	);
 
 	op		<=	instruction(15 downto 12);
@@ -167,22 +182,22 @@ begin
 
   -- TODO 5: Finish implementing the control port map
 	CPU_Control_0:			Control port map(
-		op				=>		op,
+		op			=>		op,
 		alu_op		=>		ctrl_alu_op,
 		alu_src		=>		ctrl_alu_src,
-		reg_dest		=>		ctrl_reg_dest,
-		reg_load		=>		ctrl_reg_load,
+		reg_dest	=>		ctrl_reg_dest,
+		reg_load	=>		ctrl_reg_load,
 		reg_src		=>		ctrl_reg_src,
-		mem_read		=>		,
-		mem_write	=>
+		mem_read	=>		ctrl_mem_read,
+		mem_write	=>      ctrl_mem_write
 	);
 
 	CPU_Registers_0:		Registers port map(
 		clk			=>		clk,
-		clear			=>		clear,
+		clear		=>		clear,
 		a_addr		=>		rd,
 		a_data		=>		reg_src_mux_out,
-		load			=>		ctrl_reg_load,
+		load		=>		ctrl_reg_load,
 		b_addr		=>		rs,
 		c_addr		=>		reg_dest_mux_out,
 		b_data		=>		rs_data,
@@ -190,15 +205,15 @@ begin
 	);
 
 	CPU_signextend_0:		Signextend port map(
-		immIn			=>		rt,
+		immIn		=>		rt,
 		immOut		=>		sign_ex_out
 	);
 
 	CPU_reg_dest_mux:		mux2_1 generic map(4) port map(
 		Input1		=>		rt,
 		Input2		=>		rd,
-		S				=>		ctrl_reg_dest,
-		Sout			=>		reg_dest_mux_out
+		S			=>		ctrl_reg_dest,
+		Sout		=>		reg_dest_mux_out
 	);
 
 	--------------------------------------------------------------------------
@@ -207,8 +222,8 @@ begin
 	CPU_alu_src_mux:		mux2_1 generic map(16) port map(
 		Input1		=>		rt_data,
 		Input2		=>		sign_ex_out,
-		S				=>		ctrl_alu_src,
-		Sout			=>		alu_src_mux_out
+		S			=>		ctrl_alu_src,
+		Sout		=>		alu_src_mux_out
 	);
 
 	CPU_ALU_0:				ALU_16Bit port map(
@@ -226,11 +241,11 @@ begin
 	-- TODO 6: Finish implementing the data memory
 	CPU_MEM_0:Memory port map(
 		clk			=>		clk,
-		read_en		=>		,
-		write_en		=>		,
-		addr			=>		,
-		data_in		=>		,
-		data_out		=>		,
+		read_en		=>		ctrl_mem_read,
+		write_en	=>		ctrl_mem_write,
+		addr		=>		alu_result,
+		data_in		=>		rt_data,
+		data_out	=>		mem_dataout,
 		mem_dump 	=>		'0'
 	);
 
@@ -241,11 +256,11 @@ begin
 	-- TODO 7: Finish implementing the 3-1 MUX
 	slt_input	<=	"000000000000000"&alu_result(15);
 	CPU_reg_src_mux:		mux3_1 generic map(16) port map(
-		Input1		=>		,
-		Input2		=>		,
-		Input3		=>		,
-		S				=>		,
-		Sout			=>
+		Input1		=>	mem_dataout,
+		Input2		=>	alu_result,
+		Input3		=>	slt_input,
+		S			=>	ctrl_reg_src,
+		Sout		=>  alu_src_mux_out
 	);
 
 end Behavioral;
