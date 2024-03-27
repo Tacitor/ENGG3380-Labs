@@ -266,7 +266,7 @@ begin
 		Input2		=>	alu_result,
 		Input3		=>	slt_input,
 		S			=>	ctrl_reg_src,
-		Sout		=>  alu_src_mux_outr
+		Sout		=>  reg_src_mux_out
 	);
 
 end Behavioral;
