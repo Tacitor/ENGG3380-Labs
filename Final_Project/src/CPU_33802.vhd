@@ -109,7 +109,7 @@ architecture Behavioral of CPU_3380 is
 
 	-- Signals
 	signal	instruction			:	std_logic_vector(15 downto 0);
-	signal   op				    :	std_logic_vector( 3 downto 0);
+	signal  op				    :	std_logic_vector( 3 downto 0);
 	signal	rd					:	std_logic_vector( 3 downto 0);
 	signal	rs					:	std_logic_vector( 3 downto 0);
 	signal	rt					:	std_logic_vector( 3 downto 0);
@@ -154,7 +154,7 @@ begin
 	);
 	
 	PC_Plus_2_Adder  :   ALU_16Bit port map(
-            A                =>        rs_data,
+            A                =>        pc_reg_output,
             B                =>        "0000000000000010",
             S                =>        "00",
             Sout            =>        pc_plus_2,
@@ -162,7 +162,10 @@ begin
         );
 
     -- TODO 4: Finish implementing the instruction memory
-	CPU_Instr_MEM  :  Memory generic map(INPUT => "Instr.txt") port map(
+	CPU_Instr_MEM  :  Memory generic map(
+			INPUT => "Instr.txt",
+			OUTPUT => "Instr2.txt") 
+		port map(
 		clk			    =>		clk,
 		read_en		    =>		'1',
 		write_en		=>		'0',
@@ -239,7 +242,10 @@ begin
 	--------------------------------------------------------------------------
 
 	-- TODO 6: Finish implementing the data memory
-	CPU_MEM_0:Memory port map(
+	CPU_MEM_0:Memory generic map( 
+		INPUT => "in.txt",
+		OUTPUT => "out_data.txt")
+		port map(
 		clk			=>		clk,
 		read_en		=>		ctrl_mem_read,
 		write_en	=>		ctrl_mem_write,
