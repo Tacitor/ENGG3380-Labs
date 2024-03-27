@@ -106,14 +106,6 @@ architecture Behavioral of CPU_3380 is
         Output : out std_logic_vector(15 downto 0)
 	);
 	end component;
-	
-	component Jump_Concat
-	port(
-	   Address      : in STD_LOGIC_VECTOR(11 DOWNTO 0);
-       PC           : in STD_LOGIC_VECTOR(15 DOWNTO 0);
-       PC_Jump      : out STD_LOGIC_VECTOR(15 DOWNTO 0)
-	);
-	end component;
 
 	-- Signals
 	signal	instruction			:	std_logic_vector(15 downto 0);
@@ -146,70 +138,33 @@ architecture Behavioral of CPU_3380 is
 	signal	reg_src_mux_input3  :	std_logic_vector(15 downto 0);
 	signal	pc_plus_2			:	std_logic_vector(15 downto 0);
 	signal	pc_reg_output		:	std_logic_vector(15 downto 0);
-	
-	signal pc_mux_sel           :   std_logic_vector(1 downto 0);
-	signal pc_input_Mux_out     :   std_logic_vector(15 downto 0);
-	signal pc_Jump_address      :   std_logic_vector(15 downto 0);
-	signal pc_BNE               :   std_logic_vector(15 downto 0);
-	
 begin
 	--------------------------------------------------------------------------
 	-- Instruction Fetch
 	--------------------------------------------------------------------------
 
   -- TODO 3: Finish implementing the program counter port map
-    CPU_PC           :	 PC_REG port map(
+	CPU_PC
+	:					
+	PC_REG port map(
 		clk 			=>		clk,
 		reset			=>		clear,
-		input			=>		pc_input_Mux_out, -- PC input selected from the PC mux
+		input			=>		pc_plus_2,
 		output		    =>      pc_reg_output
 	);
 	
-	-- ALU Locked to add for PC+2
 	PC_Plus_2_Adder  :   ALU_16Bit port map(
-            A               =>        pc_reg_output,
-            B               =>        "0000000000000010",
-            S               =>        "00",
+            A                =>        pc_reg_output,
+            B                =>        "0000000000000010",
+            S                =>        "00",
             Sout            =>        pc_plus_2,
             Cout            =>        cout_PC_Plus_2_Adder
-     );
-     
-     -- Another ALU Locked to add for PC+Offset
-     PC_BNE_Adder  :   ALU_16Bit port map(
-                 A               =>        pc_reg_output,
-                 B               =>        rt,
-                 S               =>        "00",
-                 Sout            =>        PC_BNE,
-                 Cout            =>        cout_PC_Plus_2_Adder
-     );
-     
-     PC_Jump    :   Jump_Concat port map(
-         Address => instruction(11 downto 0),
-         PC => pc_reg_output,
-         PC_Jump => pc_input_Mux_out
-     );
-      
-     -- Select line which Value to assign to PC for next inst
-     pc_mux_sel <= "01" when op = "1001" else -- BNE
-                   "10" when op = "1011" else -- Jump
-                   "00"; -- Anything else
-     
-     -- Selects next PC value
-     PC_Input_mux   :   mux3_1 port map(
-            input1 => pc_reg_output,
-            input2 => PC_BNE,
-            input3 => PC_Jump_address,
-            s => pc_mux_sel,
-            Sout => pc_input_Mux_out -- Next PC input   
-     );
-     
-     
+        );
 
     -- TODO 4: Finish implementing the instruction memory
 	CPU_Instr_MEM  :  Memory generic map(
-			INPUT => "Instr2.txt"
-			-- OUTPUT => "Instr2.txt"
-			) 
+			INPUT => "Instr.txt",
+			OUTPUT => "Instr2.txt") 
 		port map(
 		clk			    =>		clk,
 		read_en		    =>		'1',
@@ -311,7 +266,7 @@ begin
 		Input2		=>	alu_result,
 		Input3		=>	slt_input,
 		S			=>	ctrl_reg_src,
-		Sout		=>  alu_src_mux_outr
+		Sout		=>  reg_src_mux_out
 	);
 
 end Behavioral;
