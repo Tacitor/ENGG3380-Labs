@@ -148,7 +148,7 @@ architecture Behavioral of CPU_3380 is
 	signal	pc_reg_output		:	std_logic_vector(15 downto 0);
 	
 	signal pc_mux_sel           :   std_logic_vector(1 downto 0);
-	signal pc_input_Mux_out     :   std_logic_vector(15 downto 0);
+	signal pc_Mux_out     :   std_logic_vector(15 downto 0);
 	signal pc_Jump_address      :   std_logic_vector(15 downto 0);
 	signal pc_BNE               :   std_logic_vector(15 downto 0);
 	
@@ -156,12 +156,11 @@ begin
 	--------------------------------------------------------------------------
 	-- Instruction Fetch
 	--------------------------------------------------------------------------
-
   -- TODO 3: Finish implementing the program counter port map
     CPU_PC           :	 PC_REG port map(
 		clk 			=>		clk,
 		reset			=>		clear,
-		input			=>		pc_input_Mux_out, -- PC input selected from the PC mux
+		input			=>		pc_Mux_out, -- PC input selected from the PC mux
 		output		    =>      pc_reg_output
 	);
 	
@@ -176,7 +175,7 @@ begin
      
      -- Another ALU Locked to add for PC+Offset
      PC_BNE_Adder  :   ALU_16Bit port map(
-                 A               =>        pc_reg_output,
+                 A               =>        pc_plus_2,
                  B               =>        sign_ex_out,
                  S               =>        "00",
                  Sout            =>        PC_BNE,
@@ -196,11 +195,11 @@ begin
      
      -- Selects next PC value
      PC_Input_mux   :   mux3_1 port map(
-            input1 => pc_reg_output,
+            input1 => pc_plus_2,
             input2 => PC_BNE,
             input3 => PC_Jump_address,
             s => pc_mux_sel,
-            Sout => pc_input_Mux_out -- Next PC input   
+            Sout => pc_Mux_out -- Next PC input   
      );
      
      
