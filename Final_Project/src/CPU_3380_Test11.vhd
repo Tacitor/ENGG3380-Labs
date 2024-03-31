@@ -24,7 +24,7 @@ begin
     begin
         -- reset the system
         reset <= '0'; 
-		  wait for 50 ns;
+		  wait for 100 ns;
         reset <= '1';
 
 			for i in  1 to RUN_TIME loop
