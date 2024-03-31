@@ -177,7 +177,7 @@ begin
      -- Another ALU Locked to add for PC+Offset
      PC_BNE_Adder  :   ALU_16Bit port map(
                  A               =>        pc_reg_output,
-                 B               =>        rt,
+                 B               =>        sign_ex_out,
                  S               =>        "00",
                  Sout            =>        PC_BNE,
                  Cout            =>        cout_PC_Plus_2_Adder
@@ -186,7 +186,7 @@ begin
      PC_Jump    :   Jump_Concat port map(
          Address => instruction(11 downto 0),
          PC => pc_reg_output,
-         PC_Jump => pc_input_Mux_out
+         PC_Jump => pc_Jump_address
      );
       
      -- Select line which Value to assign to PC for next inst
@@ -311,7 +311,7 @@ begin
 		Input2		=>	alu_result,
 		Input3		=>	slt_input,
 		S			=>	ctrl_reg_src,
-		Sout		=>  alu_src_mux_outr
+		Sout		=>  reg_src_mux_out
 	);
 
 end Behavioral;
