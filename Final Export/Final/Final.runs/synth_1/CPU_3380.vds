@@ -1,0 +1,556 @@
+#-----------------------------------------------------------
+# Vivado v2016.3 (64-bit)
+# SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+# IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+# Start of session at: Wed Apr 03 09:12:38 2024
+# Process ID: 17072
+# Current directory: C:/Users/mcburney/FINAL/FINAL.runs/synth_1
+# Command line: vivado.exe -log CPU_3380.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPU_3380.tcl
+# Log file: C:/Users/mcburney/FINAL/FINAL.runs/synth_1/CPU_3380.vds
+# Journal file: C:/Users/mcburney/FINAL/FINAL.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source CPU_3380.tcl -notrace
+Command: synth_design -top CPU_3380 -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-1223] The version limit for your license is '2018.07' and will expire in -2073 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 11620 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 325.285 ; gain = 111.984
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'CPU_3380' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:15]
+INFO: [Synth 8-3491] module 'PC_REG' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/PC_REG.vhd:6' bound to instance 'CPU_PC' of component 'PC_REG' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'PC_REG' [C:/Users/mcburney/Desktop/Final_Project/src/PC_REG.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'PC_REG' (1#1) [C:/Users/mcburney/Desktop/Final_Project/src/PC_REG.vhd:15]
+INFO: [Synth 8-3491] module 'ALU_16Bit' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:5' bound to instance 'PC_Plus_2_Adder' of component 'ALU_16Bit' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'ALU_16Bit' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:15]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu00' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:30]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:16]
+INFO: [Synth 8-3491] module 'full_adder' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/full_adder2.vhd:5' bound to instance 'C1' of component 'full_adder' [C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'full_adder' [C:/Users/mcburney/Desktop/Final_Project/src/full_adder2.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'full_adder' (2#1) [C:/Users/mcburney/Desktop/Final_Project/src/full_adder2.vhd:15]
+INFO: [Synth 8-3491] module 'and_gate' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/and_gate2.vhd:5' bound to instance 'C2' of component 'and_gate' [C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:70]
+INFO: [Synth 8-638] synthesizing module 'and_gate' [C:/Users/mcburney/Desktop/Final_Project/src/and_gate2.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'and_gate' (3#1) [C:/Users/mcburney/Desktop/Final_Project/src/and_gate2.vhd:13]
+INFO: [Synth 8-3491] module 'or_gate' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/or_gate2.vhd:5' bound to instance 'C3' of component 'or_gate' [C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'or_gate' [C:/Users/mcburney/Desktop/Final_Project/src/or_gate2.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'or_gate' (4#1) [C:/Users/mcburney/Desktop/Final_Project/src/or_gate2.vhd:13]
+INFO: [Synth 8-3491] module 'MUX31' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/MUX312.vhd:5' bound to instance 'C4' of component 'MUX31' [C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'MUX31' [C:/Users/mcburney/Desktop/Final_Project/src/MUX312.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'MUX31' (5#1) [C:/Users/mcburney/Desktop/Final_Project/src/MUX312.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (6#1) [C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:16]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu01' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:31]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu02' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:32]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu03' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:33]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu04' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:35]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu05' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:36]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu06' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:37]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu07' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:38]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu08' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:40]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu09' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:41]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu10' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:42]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu11' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:43]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu12' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:45]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu13' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:46]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu14' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:47]
+INFO: [Synth 8-3491] module 'ALU' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd:5' bound to instance 'alu15' of component 'ALU' [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:48]
+INFO: [Synth 8-256] done synthesizing module 'ALU_16Bit' (7#1) [C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:15]
+INFO: [Synth 8-3491] module 'ALU_16Bit' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:5' bound to instance 'PC_BNE_Adder' of component 'ALU_16Bit' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:177]
+INFO: [Synth 8-3491] module 'Jump_Concat' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/Jump_Concat.vhd:34' bound to instance 'PC_Jump' of component 'Jump_Concat' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:185]
+INFO: [Synth 8-638] synthesizing module 'Jump_Concat' [C:/Users/mcburney/Desktop/Final_Project/src/Jump_Concat.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'Jump_Concat' (8#1) [C:/Users/mcburney/Desktop/Final_Project/src/Jump_Concat.vhd:40]
+	Parameter WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'mux3_1' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/mux3_11.vhd:5' bound to instance 'PC_Input_mux' of component 'mux3_1' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'mux3_1' [C:/Users/mcburney/Desktop/Final_Project/src/mux3_11.vhd:15]
+	Parameter WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux3_1' (9#1) [C:/Users/mcburney/Desktop/Final_Project/src/mux3_11.vhd:15]
+	Parameter INPUT bound to: Instr2.txt - type: string 
+	Parameter OUTPUT bound to: out_data.txt - type: string 
+INFO: [Synth 8-3491] module 'Memory' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/Memory.vhd:26' bound to instance 'CPU_Instr_MEM' of component 'Memory' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:209]
+INFO: [Synth 8-638] synthesizing module 'Memory' [C:/Users/mcburney/Desktop/Final_Project/src/Memory.vhd:43]
+	Parameter INPUT bound to: Instr2.txt - type: string 
+	Parameter OUTPUT bound to: out_data.txt - type: string 
+WARNING: [Synth 8-614] signal 'write_en' is read in the process but is not in the sensitivity list [C:/Users/mcburney/Desktop/Final_Project/src/Memory.vhd:99]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "mem_reg" dissolved into registers
+INFO: [Synth 8-256] done synthesizing module 'Memory' (10#1) [C:/Users/mcburney/Desktop/Final_Project/src/Memory.vhd:43]
+INFO: [Synth 8-3491] module 'Control' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/Control1.vhd:5' bound to instance 'CPU_Control_0' of component 'Control' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:232]
+INFO: [Synth 8-638] synthesizing module 'Control' [C:/Users/mcburney/Desktop/Final_Project/src/Control1.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'Control' (11#1) [C:/Users/mcburney/Desktop/Final_Project/src/Control1.vhd:18]
+INFO: [Synth 8-3491] module 'Registers' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/Registers2.vhd:5' bound to instance 'CPU_Registers_0' of component 'Registers' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:243]
+INFO: [Synth 8-638] synthesizing module 'Registers' [C:/Users/mcburney/Desktop/Final_Project/src/Registers2.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'Registers' (12#1) [C:/Users/mcburney/Desktop/Final_Project/src/Registers2.vhd:22]
+INFO: [Synth 8-3491] module 'Signextend' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/Signextend1.vhd:5' bound to instance 'CPU_signextend_0' of component 'Signextend' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:255]
+INFO: [Synth 8-638] synthesizing module 'Signextend' [C:/Users/mcburney/Desktop/Final_Project/src/Signextend1.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'Signextend' (13#1) [C:/Users/mcburney/Desktop/Final_Project/src/Signextend1.vhd:12]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'mux2_1' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/mux2_11.vhd:5' bound to instance 'CPU_reg_dest_mux' of component 'mux2_1' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:260]
+INFO: [Synth 8-638] synthesizing module 'mux2_1' [C:/Users/mcburney/Desktop/Final_Project/src/mux2_11.vhd:14]
+	Parameter WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2_1' (14#1) [C:/Users/mcburney/Desktop/Final_Project/src/mux2_11.vhd:14]
+	Parameter WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'mux2_1' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/mux2_11.vhd:5' bound to instance 'CPU_alu_src_mux' of component 'mux2_1' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:270]
+INFO: [Synth 8-638] synthesizing module 'mux2_1__parameterized1' [C:/Users/mcburney/Desktop/Final_Project/src/mux2_11.vhd:14]
+	Parameter WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'mux2_1__parameterized1' (14#1) [C:/Users/mcburney/Desktop/Final_Project/src/mux2_11.vhd:14]
+INFO: [Synth 8-3491] module 'ALU_16Bit' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd:5' bound to instance 'CPU_ALU_0' of component 'ALU_16Bit' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:277]
+	Parameter INPUT bound to: in.txt - type: string 
+	Parameter OUTPUT bound to: out_data.txt - type: string 
+INFO: [Synth 8-3491] module 'Memory' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/Memory.vhd:26' bound to instance 'CPU_MEM_0' of component 'Memory' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:290]
+INFO: [Synth 8-638] synthesizing module 'Memory__parameterized1' [C:/Users/mcburney/Desktop/Final_Project/src/Memory.vhd:43]
+	Parameter INPUT bound to: in.txt - type: string 
+	Parameter OUTPUT bound to: out_data.txt - type: string 
+WARNING: [Synth 8-614] signal 'write_en' is read in the process but is not in the sensitivity list [C:/Users/mcburney/Desktop/Final_Project/src/Memory.vhd:99]
+WARNING: [Synth 8-4767] Trying to implement RAM 'mem_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "mem_reg" dissolved into registers
+INFO: [Synth 8-256] done synthesizing module 'Memory__parameterized1' (14#1) [C:/Users/mcburney/Desktop/Final_Project/src/Memory.vhd:43]
+	Parameter WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'mux3_1' declared at 'C:/Users/mcburney/Desktop/Final_Project/src/mux3_11.vhd:5' bound to instance 'CPU_reg_src_mux' of component 'mux3_1' [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:309]
+INFO: [Synth 8-256] done synthesizing module 'CPU_3380' (15#1) [C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd:15]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[15]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[14]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[13]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[12]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[11]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[10]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[9]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[8]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port mem_dump
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[15]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[14]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[13]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[12]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[11]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[10]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[9]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[8]
+WARNING: [Synth 8-3331] design Memory has unconnected port mem_dump
+WARNING: [Synth 8-3331] design Jump_Concat has unconnected port PC[11]
+WARNING: [Synth 8-3331] design Jump_Concat has unconnected port PC[10]
+WARNING: [Synth 8-3331] design Jump_Concat has unconnected port PC[9]
+WARNING: [Synth 8-3331] design Jump_Concat has unconnected port PC[8]
+WARNING: [Synth 8-3331] design Jump_Concat has unconnected port PC[7]
+WARNING: [Synth 8-3331] design Jump_Concat has unconnected port PC[6]
+WARNING: [Synth 8-3331] design Jump_Concat has unconnected port PC[5]
+WARNING: [Synth 8-3331] design Jump_Concat has unconnected port PC[4]
+WARNING: [Synth 8-3331] design Jump_Concat has unconnected port PC[3]
+WARNING: [Synth 8-3331] design Jump_Concat has unconnected port PC[2]
+WARNING: [Synth 8-3331] design Jump_Concat has unconnected port PC[1]
+WARNING: [Synth 8-3331] design Jump_Concat has unconnected port PC[0]
+WARNING: [Synth 8-3331] design CPU_3380 has unconnected port mem_dump
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 362.582 ; gain = 149.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 362.582 ; gain = 149.281
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 362.582 ; gain = 149.281
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+INFO: [Synth 8-5544] ROM "REG_reg[15]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "REG_reg[14]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "REG_reg[13]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "REG_reg[12]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "REG_reg[11]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "REG_reg[10]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "REG_reg[9]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "REG_reg[8]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "REG_reg[7]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "REG_reg[6]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "REG_reg[5]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "REG_reg[4]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "REG_reg[3]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "REG_reg[2]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'Sout_reg' [C:/Users/mcburney/Desktop/Final_Project/src/MUX312.vhd:17]
+WARNING: [Synth 8-327] inferring latch for variable 'Sout_reg' [C:/Users/mcburney/Desktop/Final_Project/src/mux3_11.vhd:18]
+WARNING: [Synth 8-327] inferring latch for variable 'data_out_reg' [C:/Users/mcburney/Desktop/Final_Project/src/Memory.vhd:94]
+WARNING: [Synth 8-327] inferring latch for variable 'data_out_reg' [C:/Users/mcburney/Desktop/Final_Project/src/Memory.vhd:94]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 499.313 ; gain = 286.012
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 144   
++---Registers : 
+	               16 Bit    Registers := 15    
+	                8 Bit    Registers := 68    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 5     
+	   2 Input      8 Bit        Muxes := 68    
+	   2 Input      4 Bit        Muxes := 1     
+	  11 Input      2 Bit        Muxes := 2     
+	   3 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 48    
+	   2 Input      1 Bit        Muxes := 150   
+	  11 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module CPU_3380 
+Detailed RTL Component Info : 
++---Muxes : 
+	   3 Input      2 Bit        Muxes := 1     
+Module PC_REG 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+Module full_adder 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
+Module MUX31 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      1 Bit        Muxes := 1     
+Module ALU 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
+Module mux3_1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 2     
+Module Memory 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 34    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 34    
+	   2 Input      1 Bit        Muxes := 68    
+Module Control 
+Detailed RTL Component Info : 
++---Muxes : 
+	  11 Input      2 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 5     
+Module Registers 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 14    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 14    
+Module mux2_1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+Module mux2_1__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+Module Memory__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 34    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 34    
+	   2 Input      1 Bit        Muxes := 68    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[15]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[14]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[13]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[12]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[11]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[10]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[9]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[8]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[7]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port addr[6]
+WARNING: [Synth 8-3331] design Memory__parameterized1 has unconnected port mem_dump
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[15]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[14]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[13]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[12]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[11]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[10]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[9]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[8]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[7]
+WARNING: [Synth 8-3331] design Memory has unconnected port addr[6]
+WARNING: [Synth 8-3331] design Memory has unconnected port mem_dump
+WARNING: [Synth 8-3331] design CPU_3380 has unconnected port mem_dump
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu00/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu01/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu02/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu03/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu04/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu05/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu06/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu07/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu08/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu09/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu10/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu11/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu12/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu13/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu14/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Plus_2_Adder/alu15/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu00/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu01/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu02/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu03/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu04/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu05/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu06/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu07/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu08/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu09/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu10/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu11/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu12/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu13/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu14/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_BNE_Adder/alu15/C4/Sout_reg) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[15]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[14]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[13]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[12]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[11]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[10]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[9]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[8]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[7]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[6]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[5]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[4]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[3]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[2]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[1]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (PC_Input_mux/Sout_reg[0]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[15]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[14]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[13]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[12]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[11]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[10]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[9]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[8]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[7]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[6]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[5]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[4]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[3]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[2]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[1]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/data_out_reg[0]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[33][7]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[33][6]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[33][5]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[33][4]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[33][3]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[33][2]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[33][1]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[33][0]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[32][7]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[32][6]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[32][5]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[32][4]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[32][3]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[32][2]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[32][1]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[32][0]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[31][7]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[31][6]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[31][5]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[31][4]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[31][3]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[31][2]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[31][1]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[31][0]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[30][7]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[30][6]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[30][5]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[30][4]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[30][3]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[30][2]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[30][1]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[30][0]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[29][7]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[29][6]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[29][5]) is unused and will be removed from module CPU_3380.
+WARNING: [Synth 8-3332] Sequential element (CPU_Instr_MEM/mem_reg[29][4]) is unused and will be removed from module CPU_3380.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 626.199 ; gain = 412.898
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 626.199 ; gain = 412.898
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 626.199 ; gain = 412.898
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 626.199 ; gain = 412.898
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 626.199 ; gain = 412.898
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 626.199 ; gain = 412.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 626.199 ; gain = 412.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 626.199 ; gain = 412.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 626.199 ; gain = 412.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 626.199 ; gain = 412.898
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 958 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 626.199 ; gain = 371.871
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 626.199 ; gain = 412.898
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+106 Infos, 162 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 707.234 ; gain = 465.410
+INFO: [Common 17-1381] The checkpoint 'C:/Users/mcburney/FINAL/FINAL.runs/synth_1/CPU_3380.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 707.234 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 03 09:13:04 2024...

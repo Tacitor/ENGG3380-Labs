@@ -1,0 +1,20 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/MUX312.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/and_gate2.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/full_adder2.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/or_gate2.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/ALU4.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/Control1.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/ALU_16Bit3.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/Jump_Concat.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/mux2_11.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/mux3_11.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/PC_REG.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/Signextend1.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/Memory.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/Registers2.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/CPU_33802.vhd"
+vhdl xil_defaultlib  "../../../../Desktop/Final_Project/src/CPU_3380_Test11.vhd"
+
+# Do not sort compile order
+nosort

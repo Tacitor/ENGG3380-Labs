@@ -1,0 +1,32 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/MUX312.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MUX31
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/and_gate2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity and_gate
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/full_adder2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity full_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/or_gate2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity or_gate
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/ALU4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/Control1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Control
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/ALU_16Bit3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ALU_16Bit
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/Jump_Concat.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Jump_Concat
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/mux2_11.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mux2_1
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/mux3_11.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity mux3_1
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/PC_REG.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity PC_REG
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/Signextend1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Signextend
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/Memory.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Memory
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/Registers2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Registers
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/CPU_33802.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_3380
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/mcburney/Desktop/Final_Project/src/CPU_3380_Test11.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CPU_3380_Test
